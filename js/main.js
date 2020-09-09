@@ -5,6 +5,93 @@ bSended = false;
 iiwakeChange = false;
 timeChange = false;
 
+// shadow
+// 0:極小
+// 1:小
+// 2:中
+// 3:大
+// 4:特大
+// 5:ヒレ
+// 6:長い
+
+const json = '\
+[{\
+        "name": "たなご",\
+        "shadow": 1,\
+        "type": "fish",\
+        "img": "sakana_1_i.png",\
+        "place":"川"\
+    },\
+    {\
+        "name": "おいかわ",\
+        "shadow": 0,\
+        "type": "fish",\
+        "img": "sakana_2_i.png",\
+        "place":"川"\
+    },\
+    {\
+        "name": "フナ",\
+        "shadow": 1,\
+        "type": "fish",\
+        "img": "sakana_3_i.png",\
+        "place":"川"\
+    },\
+    {\
+        "name": "ウグイ",\
+        "shadow": 2,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "place":"川"\
+    }\
+]';
+
+// // $(function() {
+//   $.getJSON("data.json" , function(data) {
+// alert("aa");
+
+//   });
+// // });
+
+const data = JSON.parse(json);
+
+for (var info of data) {
+    var name = info.name;
+    var imgName = info.img;
+    var type = info.type;
+    var place = info.place;
+    var shadow = info.shadow;
+    var shadowNameList = ["極小", "小",  "中",  "大",  "特大",  "背びれ",  "細長"];
+    var shadowName = shadowNameList[shadow];
+
+    var html = `
+    <tr>
+      <td>
+        <label class="btn">
+          <span>
+            <input type="checkbox" name='email1'>
+            <img src="./images/${type}/${imgName}" alt="${name}" class="img-thumbnail"><br clear="left">
+            ${name}
+          </span>
+        </label>
+      </td>
+      <td>
+        <label class="btn">
+            <img src="./images/fish/shadow/${shadow}.png" alt="" class="img-thumbnail"><br clear="left">
+            ${shadowName}
+        </label>
+      </td>
+      <td>${place}</td>
+      <td>10月〜12月</td>
+      <td>10時〜12時</td>
+    </tr>
+    `
+
+    $('#fish_table').append(html);
+
+}
+
+
+
 function getParam(name, url)
 {
     if (!url) url = window.location.href;
