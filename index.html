@@ -13,33 +13,20 @@
     <link rel="stylesheet" type="text/css" href="./js/bootstrap-datepicker/css/bootstrap-datepicker3.standalone.min.css">
     <link rel="stylesheet" type="text/css" href="./css/sticky-footer.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
-    <title>勤怠さん</title>
+
+<!--     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+ -->
+    <title>森コンプリスト</title>
     <link rel="shortcut icon" href="./favicon.ico" />
     <link rel="apple-touch-icon" href="./images/iconwhite.png" sizes="72x72">
 </head>
 
 <body onload="initialize()">
-    <script>
-    const CLIENT_ID = '1068233076116-0ej7dv4tjpfo5vm8na2jjon27vqcerhv.apps.googleusercontent.com';
-
-    async function onLoad() {
-      try {
-        // Google APIs Client Libraryの初期化。
-        await gapi.load('client:auth2');
-        await gapi.client.init({
-            clientId: CLIENT_ID,
-            scope: 'https://www.googleapis.com/auth/gmail.send'
-        });
-        await gapi.client.load('gmail', 'v1');
-        console.log('Initialized');
-      } catch (e) {
-        console.error(e);
-      }
-    }
-
-  </script>
     <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="./"><img src="images/icon.png" width="32" height="32" class="d-inline-block align-center" alt="">  勤怠さん</a>
+        <a class="navbar-brand" href="./"><img src="images/icon.png" width="32" height="32" class="d-inline-block align-center" alt="">  森コンプリスト</a>
     </nav>
     <div class="container">
 
@@ -47,27 +34,21 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <form id="mail-form" class="py-4">
-            <div class="row">
-
-<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-  <div class="btn-group mr-2" role="group" aria-label="First group">
-	<button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">1月</button>
-	<button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">2月</button>
-	<button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">3月</button>
-	<button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">4月</button>
-	<button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">5月</button>
-	<button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">6月</button>
-	<button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">7月</button>
-	<button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">8月</button>
-	<button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">9月</button>
-	<button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">10月</button>
-	<button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">11月</button>
-	<button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">12月</button>
-  </div>
-</div>
-
-</div>
 
             <div class="row">
 
@@ -82,22 +63,384 @@
   </thead>
   <tbody>
     <tr>
-      <th scope="row"><img src="./images/fish/sakana_1_i.png" alt="たなご" class="img-thumbnail"></th>
-      <td><img src="./images/fish/small.png" alt="小" class="img-thumbnail"></td>
+      <th scope="row">
+    	<label class="btn">
+          <input type="checkbox" name='email3'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i>
+          <span>
+          	<img src="./images/fish/sakana_1_i.png" alt="" class="img-thumbnail"><br clear="left">
+          	たなご
+          </span>
+        </label>
+      </th>
+      <td>
+      	<label class="btn">
+			<img src="./images/fish/small.png" alt="小" class="img-thumbnail"><br clear="left">
+      		小
+        </label>
+      </td>
       <td>川</td>
-      <td>1月 2月 3月 4月 5月 6月 7月 8月 9月 10月 11月 12月</td>
+      <td>1月 2月 3月</td>
     </tr>
     <tr>
-      <th scope="row"><img src="./images/fish/sakana_2_i.png" alt="たなご" class="img-thumbnail"></th>
-      <td><img src="./images/fish/small.png" alt="小" class="img-thumbnail"></td>
+      <th scope="row">
+    	<label class="btn">
+          <!-- <input type="checkbox" name='email3'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> -->
+          <span>
+          	<img src="./images/fish/sakana_2_i.png" alt="" class="img-thumbnail"><br clear="left">
+          	おいかわ
+          </span>
+        </label>
+      </th>
+      <td>
+      	<label class="btn">
+			<img src="./images/fish/small.png" alt="小" class="img-thumbnail"><br clear="left">
+      		極小
+        </label>
+      </td>
       <td>川</td>
-      <td>1月 2月 3月 4月 5月 6月 7月 8月 9月 10月 11月 12月</td>
+      <td>1月 2月 3月</td>
     </tr>
     <tr>
-      <th scope="row"><img src="./images/fish/sakana_1_i.png" alt="たなご" class="img-thumbnail"></th>
-      <td><img src="./images/fish/small.png" alt="小" class="img-thumbnail"></td>
+      <th scope="row">
+    	<label class="btn">
+          <!-- <input type="checkbox" name='email3'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> -->
+          <span>
+          	<img src="./images/fish/sakana_1_i.png" alt="" class="img-thumbnail"><br clear="left">
+          	たなご
+          </span>
+        </label>
+      </th>
+      <td>
+      	<label class="btn">
+			<img src="./images/fish/small.png" alt="小" class="img-thumbnail"><br clear="left">
+      		小
+        </label>
+      </td>
       <td>川</td>
-      <td>1月 2月 3月 4月 5月 6月 7月 8月 9月 10月 11月 12月</td>
+      <td>1月 2月 3月</td>
+    </tr>
+    <tr>
+      <th scope="row">
+    	<label class="btn">
+          <!-- <input type="checkbox" name='email3'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> -->
+          <span>
+          	<img src="./images/fish/sakana_2_i.png" alt="" class="img-thumbnail"><br clear="left">
+          	おいかわ
+          </span>
+        </label>
+      </th>
+      <td>
+      	<label class="btn">
+			<img src="./images/fish/small.png" alt="小" class="img-thumbnail"><br clear="left">
+      		極小
+        </label>
+      </td>
+      <td>川</td>
+      <td>1月 2月 3月</td>
+    </tr>
+    <tr>
+      <th scope="row">
+    	<label class="btn">
+          <!-- <input type="checkbox" name='email3'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> -->
+          <span>
+          	<img src="./images/fish/sakana_1_i.png" alt="" class="img-thumbnail"><br clear="left">
+          	たなご
+          </span>
+        </label>
+      </th>
+      <td>
+      	<label class="btn">
+			<img src="./images/fish/small.png" alt="小" class="img-thumbnail"><br clear="left">
+      		小
+        </label>
+      </td>
+      <td>川</td>
+      <td>1月 2月 3月</td>
+    </tr>
+    <tr>
+      <th scope="row">
+    	<label class="btn">
+          <!-- <input type="checkbox" name='email3'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> -->
+          <span>
+          	<img src="./images/fish/sakana_2_i.png" alt="" class="img-thumbnail"><br clear="left">
+          	おいかわ
+          </span>
+        </label>
+      </th>
+      <td>
+      	<label class="btn">
+			<img src="./images/fish/small.png" alt="小" class="img-thumbnail"><br clear="left">
+      		極小
+        </label>
+      </td>
+      <td>川</td>
+      <td>1月 2月 3月</td>
+    </tr>
+    <tr>
+      <th scope="row">
+    	<label class="btn">
+          <!-- <input type="checkbox" name='email3'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> -->
+          <span>
+          	<img src="./images/fish/sakana_1_i.png" alt="" class="img-thumbnail"><br clear="left">
+          	たなご
+          </span>
+        </label>
+      </th>
+      <td>
+      	<label class="btn">
+			<img src="./images/fish/small.png" alt="小" class="img-thumbnail"><br clear="left">
+      		小
+        </label>
+      </td>
+      <td>川</td>
+      <td>1月 2月 3月</td>
+    </tr>
+    <tr>
+      <th scope="row">
+    	<label class="btn">
+          <!-- <input type="checkbox" name='email3'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> -->
+          <span>
+          	<img src="./images/fish/sakana_2_i.png" alt="" class="img-thumbnail"><br clear="left">
+          	おいかわ
+          </span>
+        </label>
+      </th>
+      <td>
+      	<label class="btn">
+			<img src="./images/fish/small.png" alt="小" class="img-thumbnail"><br clear="left">
+      		極小
+        </label>
+      </td>
+      <td>川</td>
+      <td>1月 2月 3月</td>
+    </tr>
+    <tr>
+      <th scope="row">
+    	<label class="btn">
+          <!-- <input type="checkbox" name='email3'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> -->
+          <span>
+          	<img src="./images/fish/sakana_1_i.png" alt="" class="img-thumbnail"><br clear="left">
+          	たなご
+          </span>
+        </label>
+      </th>
+      <td>
+      	<label class="btn">
+			<img src="./images/fish/small.png" alt="小" class="img-thumbnail"><br clear="left">
+      		小
+        </label>
+      </td>
+      <td>川</td>
+      <td>1月 2月 3月</td>
+    </tr>
+    <tr>
+      <th scope="row">
+    	<label class="btn">
+          <!-- <input type="checkbox" name='email3'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> -->
+          <span>
+          	<img src="./images/fish/sakana_2_i.png" alt="" class="img-thumbnail"><br clear="left">
+          	おいかわ
+          </span>
+        </label>
+      </th>
+      <td>
+      	<label class="btn">
+			<img src="./images/fish/small.png" alt="小" class="img-thumbnail"><br clear="left">
+      		極小
+        </label>
+      </td>
+      <td>川</td>
+      <td>1月 2月 3月</td>
+    </tr>
+    <tr>
+      <th scope="row">
+    	<label class="btn">
+          <!-- <input type="checkbox" name='email3'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> -->
+          <span>
+          	<img src="./images/fish/sakana_1_i.png" alt="" class="img-thumbnail"><br clear="left">
+          	たなご
+          </span>
+        </label>
+      </th>
+      <td>
+      	<label class="btn">
+			<img src="./images/fish/small.png" alt="小" class="img-thumbnail"><br clear="left">
+      		小
+        </label>
+      </td>
+      <td>川</td>
+      <td>1月 2月 3月</td>
+    </tr>
+    <tr>
+      <th scope="row">
+    	<label class="btn">
+          <!-- <input type="checkbox" name='email3'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> -->
+          <span>
+          	<img src="./images/fish/sakana_2_i.png" alt="" class="img-thumbnail"><br clear="left">
+          	おいかわ
+          </span>
+        </label>
+      </th>
+      <td>
+      	<label class="btn">
+			<img src="./images/fish/small.png" alt="小" class="img-thumbnail"><br clear="left">
+      		極小
+        </label>
+      </td>
+      <td>川</td>
+      <td>1月 2月 3月</td>
+    </tr>
+    <tr>
+      <th scope="row">
+    	<label class="btn">
+          <!-- <input type="checkbox" name='email3'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> -->
+          <span>
+          	<img src="./images/fish/sakana_1_i.png" alt="" class="img-thumbnail"><br clear="left">
+          	たなご
+          </span>
+        </label>
+      </th>
+      <td>
+      	<label class="btn">
+			<img src="./images/fish/small.png" alt="小" class="img-thumbnail"><br clear="left">
+      		小
+        </label>
+      </td>
+      <td>川</td>
+      <td>1月 2月 3月</td>
+    </tr>
+    <tr>
+      <th scope="row">
+    	<label class="btn">
+          <!-- <input type="checkbox" name='email3'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> -->
+          <span>
+          	<img src="./images/fish/sakana_2_i.png" alt="" class="img-thumbnail"><br clear="left">
+          	おいかわ
+          </span>
+        </label>
+      </th>
+      <td>
+      	<label class="btn">
+			<img src="./images/fish/small.png" alt="小" class="img-thumbnail"><br clear="left">
+      		極小
+        </label>
+      </td>
+      <td>川</td>
+      <td>1月 2月 3月</td>
+    </tr>
+    <tr>
+      <th scope="row">
+    	<label class="btn">
+          <!-- <input type="checkbox" name='email3'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> -->
+          <span>
+          	<img src="./images/fish/sakana_1_i.png" alt="" class="img-thumbnail"><br clear="left">
+          	たなご
+          </span>
+        </label>
+      </th>
+      <td>
+      	<label class="btn">
+			<img src="./images/fish/small.png" alt="小" class="img-thumbnail"><br clear="left">
+      		小
+        </label>
+      </td>
+      <td>川</td>
+      <td>1月 2月 3月</td>
+    </tr>
+    <tr>
+      <th scope="row">
+    	<label class="btn">
+          <!-- <input type="checkbox" name='email3'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> -->
+          <span>
+          	<img src="./images/fish/sakana_2_i.png" alt="" class="img-thumbnail"><br clear="left">
+          	おいかわ
+          </span>
+        </label>
+      </th>
+      <td>
+      	<label class="btn">
+			<img src="./images/fish/small.png" alt="小" class="img-thumbnail"><br clear="left">
+      		極小
+        </label>
+      </td>
+      <td>川</td>
+      <td>1月 2月 3月</td>
+    </tr>
+    <tr>
+      <th scope="row">
+    	<label class="btn">
+          <!-- <input type="checkbox" name='email3'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> -->
+          <span>
+          	<img src="./images/fish/sakana_1_i.png" alt="" class="img-thumbnail"><br clear="left">
+          	たなご
+          </span>
+        </label>
+      </th>
+      <td>
+      	<label class="btn">
+			<img src="./images/fish/small.png" alt="小" class="img-thumbnail"><br clear="left">
+      		小
+        </label>
+      </td>
+      <td>川</td>
+      <td>1月 2月 3月</td>
+    </tr>
+    <tr>
+      <th scope="row">
+    	<label class="btn">
+          <!-- <input type="checkbox" name='email3'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> -->
+          <span>
+          	<img src="./images/fish/sakana_2_i.png" alt="" class="img-thumbnail"><br clear="left">
+          	おいかわ
+          </span>
+        </label>
+      </th>
+      <td>
+      	<label class="btn">
+			<img src="./images/fish/small.png" alt="小" class="img-thumbnail"><br clear="left">
+      		極小
+        </label>
+      </td>
+      <td>川</td>
+      <td>1月 2月 3月</td>
+    </tr>
+    <tr>
+      <th scope="row">
+    	<label class="btn">
+          <!-- <input type="checkbox" name='email3'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> -->
+          <span>
+          	<img src="./images/fish/sakana_1_i.png" alt="" class="img-thumbnail"><br clear="left">
+          	たなご
+          </span>
+        </label>
+      </th>
+      <td>
+      	<label class="btn">
+			<img src="./images/fish/small.png" alt="小" class="img-thumbnail"><br clear="left">
+      		小
+        </label>
+      </td>
+      <td>川</td>
+      <td>1月 2月 3月</td>
+    </tr>
+    <tr>
+      <th scope="row">
+    	<label class="btn">
+          <!-- <input type="checkbox" name='email3'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> -->
+          <span>
+          	<img src="./images/fish/sakana_2_i.png" alt="" class="img-thumbnail"><br clear="left">
+          	おいかわ
+          </span>
+        </label>
+      </th>
+      <td>
+      	<label class="btn">
+			<img src="./images/fish/small.png" alt="小" class="img-thumbnail"><br clear="left">
+      		極小
+        </label>
+      </td>
+      <td>川</td>
+      <td>1月 2月 3月</td>
     </tr>
   </tbody>
 </table>
