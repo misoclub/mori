@@ -31,6 +31,73 @@
     </nav>
     <div class="container">
 
+  <!-- 4個分のタブ -->
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a href="#photo1" class="nav-link active" data-toggle="tab">魚</a>
+    </li>
+    <li class="nav-item">
+      <a href="#photo2" class="nav-link" data-toggle="tab">虫</a>
+    </li>
+    <li class="nav-item">
+      <a href="#photo3" class="nav-link" data-toggle="tab">海の幸</a>
+    </li>
+    <li class="nav-item">
+      <a href="#photo4" class="nav-link" data-toggle="tab">全部</a>
+    </li>
+  </ul>
+
+
+  <!-- 写真部分 -->
+  <div class="tab-content">
+    <div id="photo1" class="tab-pane active">
+      <img src="./images/fish/sakana_1_i.png" class="img-fluid" alt=""/>
+    </div>
+    <div id="photo2" class="tab-pane">
+      <img src="./images/fish/sakana_2_i.png" class="img-fluid" alt=""/>
+    </div>
+    <div id="photo3" class="tab-pane">
+      <img src="images/photo3.jpg" class="img-fluid" alt=""/>
+    </div>
+    <div id="photo4" class="tab-pane">
+      <img src="images/photo4.jpg" class="img-fluid" alt=""/>
+    </div>
+  </div>
+
+
+
+
+
+
+<table class="table table-borderless table-dark">
+  <tbody>
+    <tr>
+      <td>今月までのみ表示</td>
+      <td>
+
+  <input type="checkbox" id="sample3check" checked="">
+    <label for="sample3check">
+      <span></span>
+    </label>
+      	
+      </td>
+    </tr>
+    <tr>
+      <td>寄贈済は非表示</td>
+      <td>
+      	
+  <input type="checkbox" id="sample3check" checked="">
+    <label for="sample3check2">
+      <span></span>
+    </label>
+
+
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
 
 
         <form id="mail-form" class="py-4">
@@ -44,6 +111,7 @@
       <th scope="col">魚影</th>
       <th scope="col">場所</th>
       <th scope="col">時期</th>
+      <th scope="col">時間</th>
     </tr>
   </thead>
   <tbody>
@@ -64,7 +132,8 @@
         </label>
       </td>
       <td>川</td>
-      <td>1月 2月 3月</td>
+      <td>1月<br>2月<br>3月<br>4月<br>5月<br>6月<br>7月<br>8月<br>9月<br>10月<br>11月<br>12月</td>
+      <td>0時<br>1時<br>2時<br>3時<br>4時<br>5時<br>6時<br>7時<br>8時<br>9時<br>10時<br>11時<br>12時</td>
     </tr>
     <tr>
       <td>
@@ -83,7 +152,7 @@
         </label>
       </td>
       <td>川</td>
-      <td>1月 2月 3月</td>
+      <td>1月<br>2月<br>3月<br>4月<br>5月<br>6月<br>7月<br>8月<br>9月<br>10月<br>11月<br>12月</td>
     </tr>
     <tr>
       <td>
@@ -102,7 +171,7 @@
         </label>
       </td>
       <td>川</td>
-      <td>1月 2月 3月</td>
+      <td>1月<br>2月<br>3月<br>4月<br>5月<br>6月<br>7月<br>8月<br>9月<br>10月<br>11月<br>12月</td>
     </tr>
     <tr>
       <td>
