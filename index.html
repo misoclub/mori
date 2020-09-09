@@ -40,261 +40,70 @@
   </script>
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="./"><img src="images/icon.png" width="32" height="32" class="d-inline-block align-center" alt="">  勤怠さん</a>
+    </nav>
+    <div class="container">
 
-<div class="dropdown">
-  <button class="btn btn-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" id="signin" href="#">Google Sign In</a>
-    <a class="dropdown-item" id="signout" href="#">Google Sign Out</a>
-    <a class="dropdown-item" id="cacheclear" href="#">キャッシュクリア</a>
-    <a class="dropdown-item" id="howto" href="#">説明書</a>
-    <a class="dropdown-item" href="privacy.html">プライバシーポリシー</a>
+
+
+
+
+        <form id="mail-form" class="py-4">
+            <div class="row">
+
+<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group mr-2" role="group" aria-label="First group">
+	<button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">1月</button>
+	<button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">2月</button>
+	<button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">3月</button>
+	<button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">4月</button>
+	<button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">5月</button>
+	<button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">6月</button>
+	<button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">7月</button>
+	<button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">8月</button>
+	<button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">9月</button>
+	<button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">10月</button>
+	<button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">11月</button>
+	<button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">12月</button>
   </div>
 </div>
 
-    </nav>
-    <div class="container">
-        <form id="mail-form" class="py-4">
+</div>
+
             <div class="row">
-                <div class="col">
-                    <h6 class="text-secondary">送信先</h6>
-                </div>
-                <div class="w-100"></div>
-                <div class="col">
-                    <div class="form-group" id="mailaddr">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">To: </div>
-                            </div>
-                            <input type="email" id="originmailto" class="form-control mailTo" aria-label="" placeholder="example@example.com">
-                        </div>
-                        <div id="mailtotarget">
-                        </div>
-                    </div>
-                </div>
-                <div class="w-100"></div>
-                <div class="col">
-                    <button type="button" class="btn btn-outline-secondary btn-sm" id="addto">To:</button>
-                    <button type="button" class="btn btn-outline-secondary btn-sm" id="addcc">Cc:</button>
-                    <button type="button" class="btn btn-outline-secondary btn-sm" id="addbcc">Bcc:</button>
-                    <hr>
-                </div>
-                <div class="w-100"></div>
-                <div class="col">
-                    <h6 class="text-secondary">報告者</h6>
-                </div>
-                <div class="col">
-                    <h6 class="text-secondary">宛先名</h6>
-                </div>
-                <div class="w-100"></div>
-                <div class="col">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="myname" placeholder="自分の名前">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="yourname" placeholder="各位">
-                    </div>
-                </div>
-                <div class="w-100"></div>
-                <div class="col">
-                    <hr>
-                    <h6 class="text-secondary">日付</h6>
-                </div>
-                <div class="w-100"></div>
-                <div class="col">
-                    <div class="form-group" id="desableInputData">
-                        <fieldset disabled>
-                            <div class="input-group mb-3">
-                                <input type="text" id="targetDate" class="form-control date" name="real_date" placeholder="日付を選択してください" readonly>
-                                <div class="input-group-append">
-                                    <div class="input-group-text">
-                                        <i class="fa fa-calendar date"><input type="hidden" class="dummy-date" data-real="real_date"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </div>
-                    <hr>
-                </div>
-                <div class="w-100"></div>
-                <div class="col-5">
-                    <h6 class="text-secondary">状況</h6>
-                </div>
-                <div class="col timehide">
-                    <h6 class="text-secondary">予定時刻</h6>
-                </div>
-                <div class="w-100"></div>
-                <div class="col-5">
-                    <div class="form-group">
-                        <select class="form-control" name="type" id="typeselect">
-                            <option value="出社">出社</option>
-                            <option value="遅刻" selected>遅刻</option>
-                            <option value="早退">早退</option>
-                            <option value="有給取得">有給取得</option>
-                            <option value="代休取得">代休取得</option>
-                            <option value="欠勤">欠勤</option>
-                            <option value="直行">直行</option>
-                            <option value="直帰">直帰</option>
-                            <option value="自宅作業">自宅作業</option>
-                            <option value="リモートワーク 開始">リモートワーク 開始</option>
-                            <option value="リモートワーク 終了">リモートワーク 終了</option>
-                            <option value="休日勤務">休日勤務</option>
-                        </select>
-                    </div>
-                </div>
-                <!-- <div class="w-100"></div> -->
-                <!-- <div class="w-100"></div> -->
-                <div class="col timehide">
-                    <div class="form-group" style="display:inline-flex">
-                        <select class="form-control" name="hour">
-                            <option value="1">00時</option>
-                            <option value="2">01時</option>
-                            <option value="2">02時</option>
-                            <option value="3">03時</option>
-                            <option value="4">04時</option>
-                            <option value="5">05時</option>
-                            <option value="6">06時</option>
-                            <option value="7">07時</option>
-                            <option value="8">08時</option>
-                            <option value="9">09時</option>
-                            <option value="10">10時</option>
-                            <option value="11" selected>11時</option>
-                            <option value="12">12時</option>
-                            <option value="13">13時</option>
-                            <option value="14">14時</option>
-                            <option value="15">15時</option>
-                            <option value="16">16時</option>
-                            <option value="17">17時</option>
-                            <option value="18">18時</option>
-                            <option value="19">19時</option>
-                            <option value="20">20時</option>
-                            <option value="21">21時</option>
-                            <option value="22">22時</option>
-                            <option value="23">23時</option>
-                        </select>
-                        　
-                        <select class="form-control" name="minutes">
-                            <option value="1">00分</option>
-                            <option value="2">10分</option>
-                            <option value="3">20分</option>
-                            <option value="4">30分</option>
-                            <option value="5">40分</option>
-                            <option value="6">50分</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="w-100"></div>
-                <div class="col timehide_remote" style="display: none">
-                    <h6 class="text-secondary remote_start">開始予定時刻</h6>
-                    <h6 class="text-secondary remote_end">開始時刻</h6>
-                </div>
-                <div class="col timehide_remote" style="display: none">
-                    <h6 class="text-secondary remote_start">終了予定時刻</h6>
-                    <h6 class="text-secondary remote_end">終了時刻</h6>
-                </div>
-                <div class="w-100"></div>
-                <div class="col timehide_remote" style="display: none">
-                    <div class="form-group" style="display:inline-flex">
-                        <select class="form-control" name="hour_2">
-                            <option value="1">00時</option>
-                            <option value="2">01時</option>
-                            <option value="2">02時</option>
-                            <option value="3">03時</option>
-                            <option value="4">04時</option>
-                            <option value="5">05時</option>
-                            <option value="6">06時</option>
-                            <option value="7">07時</option>
-                            <option value="8">08時</option>
-                            <option value="9">09時</option>
-                            <option value="10">10時</option>
-                            <option value="11" selected>11時</option>
-                            <option value="12">12時</option>
-                            <option value="13">13時</option>
-                            <option value="14">14時</option>
-                            <option value="15">15時</option>
-                            <option value="16">16時</option>
-                            <option value="17">17時</option>
-                            <option value="18">18時</option>
-                            <option value="19">19時</option>
-                            <option value="20">20時</option>
-                            <option value="21">21時</option>
-                            <option value="22">22時</option>
-                            <option value="23">23時</option>
-                        </select>
-                        　
-                        <select class="form-control" name="minutes_2">
-                            <option value="1">00分</option>
-                            <option value="2">10分</option>
-                            <option value="3">20分</option>
-                            <option value="4">30分</option>
-                            <option value="5">40分</option>
-                            <option value="6">50分</option>
-                        </select>
-                    </div>
-                </div>
-                <!-- <div class="w-100"></div> -->
-                <!-- <div class="w-100"></div> -->
-                <div class="col timehide_remote" style="display: none">
-                    <div class="form-group" style="display:inline-flex">
-                        <select class="form-control" name="hour_3">
-                            <option value="1">00時</option>
-                            <option value="2">01時</option>
-                            <option value="2">02時</option>
-                            <option value="3">03時</option>
-                            <option value="4">04時</option>
-                            <option value="5">05時</option>
-                            <option value="6">06時</option>
-                            <option value="7">07時</option>
-                            <option value="8">08時</option>
-                            <option value="9">09時</option>
-                            <option value="10">10時</option>
-                            <option value="11">11時</option>
-                            <option value="12">12時</option>
-                            <option value="13">13時</option>
-                            <option value="14">14時</option>
-                            <option value="15">15時</option>
-                            <option value="16">16時</option>
-                            <option value="17">17時</option>
-                            <option value="18">18時</option>
-                            <option value="19" selected>19時</option>
-                            <option value="20">20時</option>
-                            <option value="21">21時</option>
-                            <option value="22">22時</option>
-                            <option value="23">23時</option>
-                        </select>
-                        　
-                        <select class="form-control" name="minutes_3">
-                            <option value="1">00分</option>
-                            <option value="2">10分</option>
-                            <option value="3">20分</option>
-                            <option value="4">30分</option>
-                            <option value="5">40分</option>
-                            <option value="6">50分</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="w-100"></div>
-                <div class="col">
-                    <hr>
-                    <h6 class="text-secondary riyu">理由</h6>
-                    <h6 class="text-secondary naiyo" style="display: none">作業内容</h6>
-                </div>
-                <div class="w-100"></div>
-                <div class="col">
-                    <div class="form-group">
-                        <textarea class="form-control" id="iiwake" rows="7"></textarea>
-                    </div>
-                </div>
-                <div class="w-100"></div>
-                <div class="col">
-                    <hr>
-                    <button type="button" class="btn btn-primary btn-lg btn-block" id="submitbtn" disabled>内容確認</button>
-                    <div id="errortext" style="display: none"><p class="text-danger text-center">未入力項目があります</p></div>
-                </div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">魚</th>
+      <th scope="col">魚影</th>
+      <th scope="col">場所</th>
+      <th scope="col">時期</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><img src="./images/fish/sakana_1_i.png" alt="たなご" class="img-thumbnail"></th>
+      <td><img src="./images/fish/small.png" alt="小" class="img-thumbnail"></td>
+      <td>川</td>
+      <td>1月 2月 3月 4月 5月 6月 7月 8月 9月 10月 11月 12月</td>
+    </tr>
+    <tr>
+      <th scope="row"><img src="./images/fish/sakana_2_i.png" alt="たなご" class="img-thumbnail"></th>
+      <td><img src="./images/fish/small.png" alt="小" class="img-thumbnail"></td>
+      <td>川</td>
+      <td>1月 2月 3月 4月 5月 6月 7月 8月 9月 10月 11月 12月</td>
+    </tr>
+    <tr>
+      <th scope="row"><img src="./images/fish/sakana_1_i.png" alt="たなご" class="img-thumbnail"></th>
+      <td><img src="./images/fish/small.png" alt="小" class="img-thumbnail"></td>
+      <td>川</td>
+      <td>1月 2月 3月 4月 5月 6月 7月 8月 9月 10月 11月 12月</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
             </div>
         </form>
     </div>
@@ -302,26 +111,7 @@
             <p class="text-light text-center" style="padding-top: 8px; margin: 0px" id="nt">naito-pro</p>
     </footer>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenterTitle"></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="modal-message"></div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">キャンセル</button>
-                    <button type="button" class="btn btn-primary" id="sendbutton">送信</button>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!-- Google APIs Client Libraryの読み込み。読み込み後にonloadに指定した関数が呼ばれる。 -->
     <script src="https://apis.google.com/js/client.js?onload=onLoad"></script>
     <!-- Optional JavaScript -->
