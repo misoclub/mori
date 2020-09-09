@@ -26,26 +26,17 @@
 </head>
 
 <body onload="initialize()">
+  <script language="javascript" type="text/javascript">
+    // JSONデータの取得先
+    const url = "data.json";
 
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="./"><img src="images/icon.png" width="32" height="32" class="d-inline-block align-center" alt="">  勤怠さん</a>
-
-<div class="dropdown">
-  <button class="btn btn-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" id="signin" href="#">Google Sign In</a>
-    <a class="dropdown-item" id="signout" href="#">Google Sign Out</a>
-    <a class="dropdown-item" id="cacheclear" href="#">キャッシュクリア</a>
-    <a class="dropdown-item" id="howto" href="#">説明書</a>
-    <a class="dropdown-item" href="privacy.html">プライバシーポリシー</a>
-  </div>
-</div>
-
-    </nav>
-
-
+    $.getJSON(url, (data) => {
+    	alert("aa");
+      // for (let i=0; i<data.length; i++){
+      //   console.log(`userid=${data[i].id}, username=${data[i].name}`);
+      // }
+    });
+  </script>
 
     <div class="container">
 

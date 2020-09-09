@@ -21,7 +21,7 @@ const json = '\
         "type": "fish",\
         "img": "sakana_1_i.png",\
         "season":[1,2,3,11,12],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
         "place":"川"\
     },\
     {\
@@ -39,7 +39,7 @@ const json = '\
         "type": "fish",\
         "img": "sakana_3_i.png",\
         "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
         "place":"川"\
     },\
     {\
@@ -48,17 +48,17 @@ const json = '\
         "type": "fish",\
         "img": "sakana_4_i.png",\
         "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
-        "time":[0,1,2,3,4,5,6,7,8,9,16,17,18,19,20,21,22,23],\
+        "time":[0,1,2,3,4,5,6,7,8,9,16,17,18,19,20,21,22,23,24],\
         "place":"川"\
     }\
 ]';
 
-// // $(function() {
-//   $.getJSON("data.json" , function(data) {
-// alert("aa");
+// $(function() {
+  // $.getJSON("data.json" , function(data) {
+  //   alert("aa");
 
-//   });
-// // });
+  // });
+// });
 
 const data = JSON.parse(json);
 
@@ -70,6 +70,8 @@ for (var info of data) {
     var shadow = info.shadow;
     var shadowNameList = ["極小", "小",  "中",  "大",  "特大",  "背びれ",  "細長"];
     var shadowName = shadowNameList[shadow];
+    var seasonText = MakeSeasonText(info.season, "月");
+    var timeText = MakeSeasonText(info.time, "時");
 
     var html = `
     <tr>
@@ -89,8 +91,8 @@ for (var info of data) {
         </label>
       </td>
       <td>${place}</td>
-      <td>10月〜12月</td>
-      <td>10時〜12時</td>
+      <td>${seasonText}</td>
+      <td>${timeText}</td>
     </tr>
     `
 
@@ -98,7 +100,51 @@ for (var info of data) {
 
 }
 
+function MakeSeasonText(array, tanni)
+{
+    var first = false;
+    var oldMonth = -1;
+    var text = "";
 
+    var tmpStartMonth = "";
+    var tmpEndMonth = "";
+    for(var month of array)
+    {
+        console.log(month);
+        // 初回は無条件で月を入れる。
+        if (!first)
+        {
+        console.log("a");
+            tmpStartMonth = month + tanni;
+            first = true;
+        }
+        // 連続した月。
+        else if (month - oldMonth == 1)
+        {
+        console.log("b");
+            tmpEndMonth = month + tanni;
+        }
+        else
+        {
+        console.log("c");
+            text += tmpStartMonth + "〜" + tmpEndMonth + ",";
+            tmpStartMonth = month + tanni;
+            tmpEndMonth = "";
+        }
+        oldMonth = month;
+    }
+
+    if (tmpStartMonth !== "" && tmpEndMonth !== "")
+    {
+        text += tmpStartMonth + "〜" + tmpEndMonth;
+    }
+    else if(tmpStartMonth !== "")
+    {
+        text += tmpStartMonth;
+    }
+
+    return text;
+}
 
 function getParam(name, url)
 {
