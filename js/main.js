@@ -744,6 +744,7 @@ function CreateTable(json)
 {
     const data = JSON.parse(json);
 
+    var count = 0;
     for (var info of data) {
         var name = info.name;
         var imgName = info.img;
@@ -761,7 +762,7 @@ function CreateTable(json)
           <td>
             <label class="btn">
               <span>
-                <input type="checkbox" name='' class="kizou_check">
+                <input type="checkbox" name='${type}${count}' class="kizou_check" id="${type}_check">
                 <img src="./images/${type}/${imgName}" alt="${name}" class="img-thumbnail"><br clear="left">
                 ${name}
               </span>
@@ -780,6 +781,7 @@ function CreateTable(json)
         `
 
         $('#fish_table').append(html);
+        count++;
     }
 }
 
@@ -859,16 +861,38 @@ function MakeSeasonText(array, tanni)
 // 今月チェック。
 $('#this_month_check').click(function() {
     CheckVisible();    
+    saveAllParam();
 });
 
 // 寄贈済チェック。
 $('#kizou_setting_check').click(function() {
     CheckVisible();    
+    saveAllParam();
 });
 
 $('.kizou_check').click(function() {
-    CheckVisible();    
+    CheckVisible(); 
+    saveAllParam();
 });
+
+function saveAllParam()
+{
+    var saveData = {};
+
+    // チェック状態を保存。
+    $('.kizou_check').each(function(index, element) {
+        var name = $(this).attr('name');
+        saveData[name] = $(this).prop('checked');
+    })
+
+    var thisMonth = $('#this_month_check').prop('checked');
+    saveData["thisMonth"] = thisMonth;
+
+    var kizou = $('#kizou_setting_check').prop('checked');
+    saveData["kizou"] = kizou;
+
+    store.set('user_data', saveData);
+}
 
 // 描画切り替え。
 function CheckVisible()
@@ -1108,84 +1132,24 @@ function dateToStr24HPad0DayOfWeek(date, format) {
     return format;
 }
 
-function load() {
+function load()
+{
     var saveData = store.get('user_data');
 
     // データが存在するならせっせとフォームにセットしにいく。
-    if (!saveData) {
+    if (!saveData)
+    {
         return;
     }
 
-
-    var type = $('#mail-form [name=type] option:selected').text();
-    if(saveData["type"] && saveData["type"] != "")
-    {
-        type = saveData["type"];
+    // 各データのチェック状態を復活。
+    for (let key in saveData) {
+      $('input[name='+key+']').prop('checked', saveData[key]);
     }
 
-    $('#myname').val(saveData["name"]);
-    $('#yourname').val(saveData["yourname"]);
-    // 前回送信したタイプを取得。
-    $('#typeselect').val(type);
+    $('#this_month_check').prop('checked', saveData["thisMonth"]);
 
-    // タイプ変更に伴うレイアウト変更。
-    OnChangeType();
-
-    // いいわけが存在するときのみ値を入れる。
-    var iiwakeData = store.get(type);
-    if (iiwakeData) {
-        $('#iiwake').val(iiwakeData["iiwake"]);
-        // 時をセット。
-        $('#mail-form [name=hour] option[value="' + iiwakeData["hour"] + '"]').prop('selected', true);
-        // 分をセット。
-        $('#mail-form [name=minutes] option[value="' + iiwakeData["minutes"] + '"]').prop('selected', true);
-        // 時をセット。
-        $('#mail-form [name=hour_2] option[value="' + iiwakeData["hour_2"] + '"]').prop('selected', true);
-        // 分をセット。
-        $('#mail-form [name=minutes_2] option[value="' + iiwakeData["minutes_2"] + '"]').prop('selected', true);
-        // 時をセット。
-        $('#mail-form [name=hour_3] option[value="' + iiwakeData["hour_3"] + '"]').prop('selected', true);
-        // 分をセット。
-        $('#mail-form [name=minutes_3] option[value="' + iiwakeData["minutes_3"] + '"]').prop('selected', true);
-    }
-
-    var mailto = saveData["mailto"];
-    if (mailto !== "") {
-        var mailtoArray = mailto.split(",");
-        for (var to of mailtoArray) {
-            if (count == 0) {
-                $('#originmailto').val(to);
-                ++count;
-            } else {
-                var html = makeToForm("To", count, to);
-                var target = $('#mailtotarget');
-                target.append(html);
-                ++count;
-            }
-        }
-    }
-
-    var mailcc = saveData["mailcc"];
-    if (mailcc !== "") {
-        var mailccArray = mailcc.split(",");
-        for (var cc of mailccArray) {
-            var html = makeToForm("Cc", count, cc);
-            var target = $('#mailtotarget');
-            target.append(html);
-            ++count;
-        }
-    }
-
-    var mailbcc = saveData["mailbcc"];
-    if (mailbcc !== "") {
-        var mailbccArray = mailbcc.split(",");
-        for (var bcc of mailbccArray) {
-            var html = makeToForm("Bcc", count, bcc);
-            var target = $('#mailtotarget');
-            target.append(html);
-            ++count;
-        }
-    }
+    $('#kizou_setting_check').prop('checked', saveData["kizou"]);
 }
 
 function save(mailto, mailcc, mailbcc, yourname, name, iiwake, type, hour, minutes, hour_2, minutes_2, hour_3, minutes_3) {
@@ -1211,21 +1175,11 @@ function save(mailto, mailcc, mailbcc, yourname, name, iiwake, type, hour, minut
 }
 
 function initialize() {
-    // 今日のいい感じの日時を入れておく。
-    var nowdate = new Date();
-    // デフォルト今日の日付。
-    var day = dateToStr24HPad0DayOfWeek(nowdate, 'YYYY年MM月DD日(WW)');
-    $('#targetDate').val(day);
-    // 現在時刻をセット。11時台が一番多そうなので決め打ちにする。
-    // $('#mail-form [name=hour] option[value="' + nowdate.getHours() + '"]').prop('selected', true);
-
     // 前回のデータ読み込み。
     load();
 
-    // 送信ボタン押せるか。
-    var enable = checkSendButton();
-    $('#submitbtn').prop('disabled', !enable);
-    enable ? $('#errortext').hide() : $('#errortext').show();
+    // 表示チェック。
+    CheckVisible();
 }
 
 function OnChangeType()
