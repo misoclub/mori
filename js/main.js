@@ -50,71 +50,761 @@ const json = '\
         "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
         "time":[0,1,2,3,4,5,6,7,8,9,16,17,18,19,20,21,22,23,24],\
         "place":"川"\
+    },\
+    {\
+        "name": "コイ",\
+        "shadow": 3,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ニシキゴイ",\
+        "shadow": 3,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "キンギョ",\
+        "shadow": 0,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "デメキン",\
+        "shadow": 0,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ランチュウ",\
+        "shadow": 1,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "メダカ",\
+        "shadow": 0,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[4,5,6,7,8],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ザリガニ",\
+        "shadow": 1,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[4,5,6,7,8,9],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "スッポン",\
+        "shadow": 3,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[8,9],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "カミツキガメ",\
+        "shadow": 3,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[4,5,6,7,8,9,10],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "オタマジャクシ",\
+        "shadow": 0,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[3,4,5,6,7],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "カエル",\
+        "shadow": 1,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[5,6,7,8],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ドンコ",\
+        "shadow": 1,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ドジョウ",\
+        "shadow": 1,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[3,4,5],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ナマズ",\
+        "shadow": 3,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[5,6,7,8,9,10],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ライギョ",\
+        "shadow": 3,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[6,7,8],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ブルーギル",\
+        "shadow": 1,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "イエローパーチ",\
+        "shadow": 2,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[1,2,3,10,11,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ブラックバス",\
+        "shadow": 3,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ティラピア",\
+        "shadow": 2,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[6,7,8,9,10],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "パイク",\
+        "shadow": 3,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[9,10,11,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ワカサギ",\
+        "shadow": 1,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[1,2,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "アユ",\
+        "shadow": 2,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[7,8,9],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ヤマメ",\
+        "shadow": 2,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[3,4,5,6,9,10,11],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "オオイワナ",\
+        "shadow": 2,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[3,4,5,6,9,10,11],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ゴールデントラウト",\
+        "shadow": 2,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[3,4,5,9,10,11],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "イトウ",\
+        "shadow": 4,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[1,2,3,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "サケ",\
+        "shadow": 3,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[9],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "キングサーモン",\
+        "shadow": 3,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[9],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "シャンハイガニ",\
+        "shadow": 1,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[9,10,11],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "グッピー",\
+        "shadow": 0,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[4,5,6,7,8,9,10,11],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ドクターフィッシュ",\
+        "shadow": 0,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[5,6,7,8,9],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "エンゼルフィッシュ",\
+        "shadow": 1,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[5,6,7,8,9,10],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ベタ",\
+        "shadow": 1,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[5,6,7,8,9,10],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ネオンテトラ",\
+        "shadow": 0,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[4,5,6,7,8,9,10,11],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "レインボーフィッシュ",\
+        "shadow": 0,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[5,6,7,8,9,10],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ピラニア",\
+        "shadow": 1,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[6,7,8,9],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "アロワナ",\
+        "shadow": 3,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[6,7,8,9],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ドラド",\
+        "shadow": 3,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[6,7,8,9],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ガー",\
+        "shadow": 4,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[6,7,8,9],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ピラルク",\
+        "shadow": 4,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[6,7,8,9],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "エンドリケリー",\
+        "shadow": 3,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[6,7,8,9],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "チョウザメ",\
+        "shadow": 4,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[1,2,3,9,10,11,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "クリオネ",\
+        "shadow": 0,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[1,2,3,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "タツノオトシゴ",\
+        "shadow": 0,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[4,5,6,7,8,9,10,11],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "クマノミ",\
+        "shadow": 0,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[4,5,6,7,8,9],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ナンヨウハギ",\
+        "shadow": 1,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[4,5,6,7,8,9],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "チョウチョウウオ",\
+        "shadow": 1,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[4,5,6,7,8,9],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ナポレオンフィッシュ",\
+        "shadow": 4,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[7,8],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ミノカサゴ",\
+        "shadow": 2,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[4,5,6,7,8,9,10,11],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "フグ",\
+        "shadow": 2,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[1,2,11,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ハリセンボン",\
+        "shadow": 2,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[7,8,9],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "アンチョビ",\
+        "shadow": 1,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "アジ",\
+        "shadow": 1,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "イシダイ",\
+        "shadow": 2,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[3,4,5,6,7,8,9,10,11],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "スズキ",\
+        "shadow": 4,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "タイ",\
+        "shadow": 3,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "カレイ",\
+        "shadow": 2,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[1,2,3,4,10,11,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ヒラメ",\
+        "shadow": 4,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "イカ",\
+        "shadow": 2,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[1,2,3,4,5,6,7,8,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ウツボ",\
+        "shadow": 6,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[8,9,10],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ハナヒゲウツボ",\
+        "shadow": 6,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[6,7,8,9,10],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "マグロ",\
+        "shadow": 4,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[1,2,3,4,11,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "カジキ",\
+        "shadow": 4,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[1,2,3,4,7,8,9,11,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ロウニンアジ",\
+        "shadow": 3,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[5,6,7,8,9,10],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "シイラ",\
+        "shadow": 4,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[5,6,7,8,9,10],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "マンボウ",\
+        "shadow": 5,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[7,8,9],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "エイ",\
+        "shadow": 3,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[8,9,10,11],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ノコギリザメ",\
+        "shadow": 5,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[6,7,8,9],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "シュモクザメ",\
+        "shadow": 5,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[6,7,8,9],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "サメ",\
+        "shadow": 5,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[6,7,8,9],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "ジンベエザメ",\
+        "shadow": 5,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[6,7,8,9],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "コバンザメ",\
+        "shadow": 5,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[6,7,8,9],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "チョウチンアンコウ",\
+        "shadow": 3,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[1,2,3,11,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "リュウグウノツカイ",\
+        "shadow": 4,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[1,2,3,4,5,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "デメニギス",\
+        "shadow": 1,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "シーラカンス",\
+        "shadow": 4,\
+        "type": "fish",\
+        "img": "sakana_4_i.png",\
+        "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
     }\
 ]';
 
-// $(function() {
-  // $.getJSON("data.json" , function(data) {
-  //   alert("aa");
 
-  // });
-// });
-
-
-    // JSONデータの取得先
-    const url = "data.json";
-
-    $.getJSON(url, (data) => {
-        CreateTable(data);
-      // for (let i=0; i<data.length; i++){
-      //   console.log(`userid=${data[i].id}, username=${data[i].name}`);
-      // }
-    });
-
+CreateTable(json);
 
 function CreateTable(json)
 {
+    const data = JSON.parse(json);
 
-const data = JSON.parse(json);
+    for (var info of data) {
+        var name = info.name;
+        var imgName = info.img;
+        var type = info.type;
+        var place = info.place;
+        var shadow = info.shadow;
+        var shadowNameList = ["極小", "小",  "中",  "大",  "特大",  "背びれ",  "細長"];
+        var shadowName = shadowNameList[shadow];
+        var seasonText = MakeSeasonText(info.season, "月");
+        var timeText = MakeSeasonText(info.time, "時");
+        var thisMonth = CheckThisMonth(info.season);// 今月までフラグ。
 
-for (var info of data) {
-    var name = info.name;
-    var imgName = info.img;
-    var type = info.type;
-    var place = info.place;
-    var shadow = info.shadow;
-    var shadowNameList = ["極小", "小",  "中",  "大",  "特大",  "背びれ",  "細長"];
-    var shadowName = shadowNameList[shadow];
-    var seasonText = MakeSeasonText(info.season, "月");
-    var timeText = MakeSeasonText(info.time, "時");
+        var html = `
+        <tr class="table_row ${thisMonth}">
+          <td>
+            <label class="btn">
+              <span>
+                <input type="checkbox" name='' class="kizou_check">
+                <img src="./images/${type}/${imgName}" alt="${name}" class="img-thumbnail"><br clear="left">
+                ${name}
+              </span>
+            </label>
+          </td>
+          <td>
+            <label class="btn">
+                <img src="./images/fish/shadow/${shadow}.png" alt="" class="img-thumbnail"><br clear="left">
+                ${shadowName}
+            </label>
+          </td>
+          <td>${place}</td>
+          <td>${seasonText}</td>
+          <td>${timeText}</td>
+        </tr>
+        `
 
-    var html = `
-    <tr>
-      <td>
-        <label class="btn">
-          <span>
-            <input type="checkbox" name='email1'>
-            <img src="./images/${type}/${imgName}" alt="${name}" class="img-thumbnail"><br clear="left">
-            ${name}
-          </span>
-        </label>
-      </td>
-      <td>
-        <label class="btn">
-            <img src="./images/fish/shadow/${shadow}.png" alt="" class="img-thumbnail"><br clear="left">
-            ${shadowName}
-        </label>
-      </td>
-      <td>${place}</td>
-      <td>${seasonText}</td>
-      <td>${timeText}</td>
-    </tr>
-    `
-
-    $('#fish_table').append(html);
-
+        $('#fish_table').append(html);
+    }
 }
 
+function CheckThisMonth(array)
+{
+    // 今月まで。
+    var today = new Date();
+    var thisMonth = (today.getMonth()+1);
+
+    // 来月。
+    var next = new Date(today.getFullYear(), today.getMonth()+1, today.getDate());
+    var nextMonth = (next.getMonth()+1);
+
+    // まず今月出現する。
+    var thisMonthResult = array.indexOf(thisMonth);
+
+    // 来月は出現しない。
+    var nextMonthResult = array.indexOf(nextMonth);
+    
+    // 今月まで。
+    if(thisMonthResult >= 0 && nextMonthResult == -1)
+    {
+        return "ThisMonth";
+    }
+    return "NotThisMonth";
 }
 
 function MakeSeasonText(array, tanni)
@@ -127,24 +817,27 @@ function MakeSeasonText(array, tanni)
     var tmpEndMonth = "";
     for(var month of array)
     {
-        console.log(month);
         // 初回は無条件で月を入れる。
         if (!first)
         {
-        console.log("a");
             tmpStartMonth = month + tanni;
             first = true;
         }
         // 連続した月。
         else if (month - oldMonth == 1)
         {
-        console.log("b");
             tmpEndMonth = month + tanni;
         }
         else
         {
-        console.log("c");
-            text += tmpStartMonth + "〜" + tmpEndMonth + ",";
+            if (tmpStartMonth !== "" && tmpEndMonth !== "")
+            {
+                text += tmpStartMonth + "〜" + tmpEndMonth + ",";
+            }
+            else if(tmpStartMonth !== "")
+            {
+                text += tmpStartMonth + ",";
+            }
             tmpStartMonth = month + tanni;
             tmpEndMonth = "";
         }
@@ -161,6 +854,53 @@ function MakeSeasonText(array, tanni)
     }
 
     return text;
+}
+
+// 今月チェック。
+$('#this_month_check').click(function() {
+    CheckVisible();    
+});
+
+// 寄贈済チェック。
+$('#kizou_setting_check').click(function() {
+    CheckVisible();    
+});
+
+$('.kizou_check').click(function() {
+    CheckVisible();    
+});
+
+// 描画切り替え。
+function CheckVisible()
+{
+    // 寄贈チェック。寄贈済のやつを消す。
+    var kizou = $('#kizou_setting_check').prop('checked');
+    if(kizou)
+    {
+        // チェックついてるやつは消す。
+        $('.kizou_check').each(function(index, element) {
+            if($(this).prop('checked'))
+            {
+                $(this).parent().parent().parent().parent().hide();
+            } 
+        })
+    }
+    else
+    {
+        // 全部表示。
+        $('.table_row').show();
+    }
+
+    // 今月までチェック。今月までじゃないやつを消す。
+    var thisMonth = $('#this_month_check').prop('checked');
+    if(thisMonth)
+    {
+        $('.NotThisMonth').hide();
+    }
+    else
+    {
+        $('.NotThisMonth').show();
+    }
 }
 
 function getParam(name, url)
@@ -343,27 +1083,6 @@ function delform(id) {
     $('#addform' + id).remove();
 }
 
-function OnN() {
-    var n = 0;
-    $('#nt').click(function() {
-        ++n;
-        if (n == 2) {
-            alert("\u305d\u3093\u306a\u3068\u3053\u62bc\u3057\u3066\u3082\u306a\u306b\u3082\u8d77\u3053\u3089\u306a\u3044\u3088");
-        } else if (n == 10) {
-            alert("\u305d\u3093\u306a\u306b\u306a\u3044\u3068\u3046\u3055\u3093\u304c\u597d\u304d\u304b");
-        } else if (n == 30) {
-            alert("\u305f\u307e\u3063\u3066\u308b\u3001\u3063\u3066\u3084\u3064\u306a\u306e\u304b\u306a\uff1f");
-        } else if (n == 60) {
-            alert("\u3057\u3087\u3046\u304c\u306a\u3044\u306b\u3083\u3042\u30fb\u30fb");
-        } else if (n == 100) {
-            alert("\u3044\u3044\u3088\u3002");
-        } else if (n == 160) {
-            alert("\u306a\u3044\u3068\u3046\u3055\u3093\u304c\u4e00\u676f\u5962\u3063\u3066\u3042\u3052\u308b\u3002\n\u307f\u3093\u306a\u306b\u306f\u5185\u7dd2\u3060\u3087\u2606");
-        } else if (n > 180 && n % 5 == 0) {
-            alert("\u306b\u3083\u301c\u3093\uff08\u3082\u3046\u306a\u306b\u3082\u8d77\u3053\u308a\u307e\u305b\u3093\uff09");
-        }
-    });
-}
 // Webからのコピペ。日付フォーマット。
 function dateToStr24HPad0DayOfWeek(date, format) {
     var weekday = ["日", "月", "火", "水", "木", "金", "土"];
