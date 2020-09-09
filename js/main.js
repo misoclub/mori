@@ -60,6 +60,18 @@ const json = '\
   // });
 // });
 
+
+    // JSONデータの取得先
+    const url = "data.json";
+
+    $.getJSON(url, (data) => {
+        CreateTable(data);
+      // for (let i=0; i<data.length; i++){
+      //   console.log(`userid=${data[i].id}, username=${data[i].name}`);
+      // }
+    });
+
+
 function CreateTable(json)
 {
 
