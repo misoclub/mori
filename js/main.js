@@ -60,6 +60,9 @@ const json = '\
   // });
 // });
 
+function CreateTable(json)
+{
+
 const data = JSON.parse(json);
 
 for (var info of data) {
@@ -97,6 +100,8 @@ for (var info of data) {
     `
 
     $('#fish_table').append(html);
+
+}
 
 }
 
