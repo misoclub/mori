@@ -20,3 +20,27 @@ body {
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
 }
+
+td {
+text-align: center;
+vertical-align: middle;
+}
+
+th {
+text-align: center;
+vertical-align: middle;
+}
+
+tr {
+text-align: center;
+vertical-align: middle;
+}
+
+.sticky_table thead th {
+  /* 縦スクロール時に固定する */
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  /* tbody内のセルより手前に表示する */
+  z-index: 1;
+}
