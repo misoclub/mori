@@ -732,9 +732,62 @@ const json = '\
 ]';
 
 
-CreateTable(json);
+const mushi_json = '\
+[{\
+        "name": "たなご",\
+        "shadow": 1,\
+        "type": "fish",\
+        "img": "sakana_1_i.png",\
+        "season":[1,2,3,11,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "シーラカンス",\
+        "shadow": 4,\
+        "type": "fish",\
+        "img": "sakana_80_i.png",\
+        "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"海"\
+    }\
+]';
 
-function CreateTable(json)
+const kaisan_json = '\
+[{\
+        "name": "たなご",\
+        "shadow": 1,\
+        "type": "fish",\
+        "img": "sakana_1_i.png",\
+        "season":[1,2,3,11,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"川"\
+    },\
+    {\
+        "name": "デメニギス",\
+        "shadow": 1,\
+        "type": "fish",\
+        "img": "sakana_79_i.png",\
+        "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
+        "time":[0,1,2,3,4,21,22,23,24],\
+        "place":"海"\
+    },\
+    {\
+        "name": "シーラカンス",\
+        "shadow": 4,\
+        "type": "fish",\
+        "img": "sakana_80_i.png",\
+        "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "place":"海"\
+    }\
+]';
+
+CreateFishTable(json);
+CreateMushiTable(mushi_json);
+CreateKaisanTable(kaisan_json);
+
+function CreateFishTable(json)
 {
     const data = JSON.parse(json);
 
@@ -771,6 +824,81 @@ function CreateTable(json)
         `
 
         $('#fish_table').append(html);
+        count++;
+    }
+}
+
+function CreateMushiTable(json)
+{
+    const data = JSON.parse(json);
+
+    var count = 0;
+    for (var info of data) {
+        var name = info.name;
+        var imgName = info.img;
+        var type = info.type;
+        var place = info.place;
+        var seasonText = MakeSeasonText(info.season, "月");
+        var timeText = MakeSeasonText(info.time, "時");
+        var thisMonth = CheckThisMonth(info.season);// 今月までフラグ。
+
+        var html = `
+        <tr class="table_row ${thisMonth}" name='${type}${count}'>
+          <td class="align-middle">
+                <input type="checkbox" name='${type}${count}' class="kizou_check" id="${type}_check">
+          </td>
+          <td class="align-middle">
+                <img src="./images/${type}/${imgName}" alt="${name}" class="img-thumbnail" width="59px"><br>
+                ${name}
+          </td>
+          <td class="align-middle">${place}</td>
+          <td class="align-middle">${seasonText}</td>
+          <td class="align-middle">${timeText}</td>
+        </tr>
+        `
+
+        $('#mushi_table').append(html);
+        count++;
+    }
+}
+
+function CreateKaisanTable(json)
+{
+    const data = JSON.parse(json);
+
+    var count = 0;
+    for (var info of data) {
+        var name = info.name;
+        var imgName = info.img;
+        var type = info.type;
+        var place = info.place;
+        var shadow = info.shadow;
+        var shadowNameList = ["極小", "小",  "中",  "大",  "特大",  "背びれ",  "細長"];
+        var shadowName = shadowNameList[shadow];
+        var seasonText = MakeSeasonText(info.season, "月");
+        var timeText = MakeSeasonText(info.time, "時");
+        var thisMonth = CheckThisMonth(info.season);// 今月までフラグ。
+
+        var html = `
+        <tr class="table_row ${thisMonth}" name='${type}${count}'>
+          <td class="align-middle">
+                <input type="checkbox" name='${type}${count}' class="kizou_check" id="${type}_check">
+          </td>
+          <td class="align-middle">
+                <img src="./images/${type}/${imgName}" alt="${name}" class="img-thumbnail" width="59px"><br>
+                ${name}
+          </td>
+          <td class="align-middle">
+                <img src="./images/fish/shadow/${shadow}.png" alt="" class="img-thumbnail" width="50px"><br>
+                ${shadowName}
+          </td>
+          <td class="align-middle">${place}</td>
+          <td class="align-middle">${seasonText}</td>
+          <td class="align-middle">${timeText}</td>
+        </tr>
+        `
+
+        $('#kaisan_table').append(html);
         count++;
     }
 }
@@ -876,6 +1004,24 @@ $('#kizou_setting_check').click(function() {
 $('.kizou_check').click(function() {
     CheckVisible(); 
     saveAllParam();
+});
+
+$('#tab_sakana').click(function(){
+    $('#main_sakana').show();
+    $('#main_mushi').hide();
+    $('#main_kaisan').hide();
+});
+
+$('#tab_mushi').click(function(){
+    $('#main_sakana').hide();
+    $('#main_mushi').show();
+    $('#main_kaisan').hide();
+});
+
+$('#tab_kaisan').click(function(){
+    $('#main_sakana').hide();
+    $('#main_mushi').hide();
+    $('#main_kaisan').show();
 });
 
 // 描画切り替え。
