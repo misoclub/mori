@@ -906,7 +906,7 @@ function CheckVisible()
         $('.kizou_check').each(function(index, element) {
             if($(this).prop('checked'))
             {
-                $(this).parent().parent().parent().parent().hide();
+                $(this).parent().parent().hide();
             } 
         })
     }
