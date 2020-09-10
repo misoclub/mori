@@ -735,18 +735,16 @@ const json = '\
 const mushi_json = '\
 [{\
         "name": "たなご",\
-        "shadow": 1,\
-        "type": "fish",\
-        "img": "sakana_1_i.png",\
-        "season":[1,2,3,11,12],\
+        "type": "mushi",\
+        "img": "musi_1_i.png",\
+        "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
         "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
         "place":"川"\
     },\
     {\
         "name": "シーラカンス",\
-        "shadow": 4,\
-        "type": "fish",\
-        "img": "sakana_80_i.png",\
+        "type": "mushi",\
+        "img": "musi_2_i.png",\
         "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
         "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
         "place":"海"\
@@ -757,26 +755,26 @@ const kaisan_json = '\
 [{\
         "name": "たなご",\
         "shadow": 1,\
-        "type": "fish",\
-        "img": "sakana_1_i.png",\
-        "season":[1,2,3,11,12],\
+        "type": "kaisan",\
+        "img": "seafood_1_i.png",\
+        "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
         "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
         "place":"川"\
     },\
     {\
         "name": "デメニギス",\
         "shadow": 1,\
-        "type": "fish",\
-        "img": "sakana_79_i.png",\
+        "type": "kaisan",\
+        "img": "seafood_2_i.png",\
         "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
-        "time":[0,1,2,3,4,21,22,23,24],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
         "place":"海"\
     },\
     {\
         "name": "シーラカンス",\
         "shadow": 4,\
-        "type": "fish",\
-        "img": "sakana_80_i.png",\
+        "type": "kaisan",\
+        "img": "seafood_3_i.png",\
         "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
         "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
         "place":"海"\
@@ -807,14 +805,12 @@ function CreateFishTable(json)
         var html = `
         <tr class="table_row ${thisMonth}" name='${type}${count}'>
           <td class="align-middle">
-                <input type="checkbox" name='${type}${count}' class="kizou_check" id="${type}_check">
-          </td>
-          <td class="align-middle">
+                <input type="hidden" name='${type}${count}' class="kizou_check" id="${type}_check">
                 <img src="./images/${type}/${imgName}" alt="${name}" class="img-thumbnail" width="59px"><br>
                 ${name}
           </td>
           <td class="align-middle">
-                <img src="./images/fish/shadow/${shadow}.png" alt="" class="img-thumbnail" width="50px"><br>
+                <img src="./images/${type}/shadow/${shadow}.png" alt="" class="img-thumbnail" width="50px"><br>
                 ${shadowName}
           </td>
           <td class="align-middle">${place}</td>
@@ -845,9 +841,7 @@ function CreateMushiTable(json)
         var html = `
         <tr class="table_row ${thisMonth}" name='${type}${count}'>
           <td class="align-middle">
-                <input type="checkbox" name='${type}${count}' class="kizou_check" id="${type}_check">
-          </td>
-          <td class="align-middle">
+                <input type="hidden" name='${type}${count}' class="kizou_check" id="${type}_check">
                 <img src="./images/${type}/${imgName}" alt="${name}" class="img-thumbnail" width="59px"><br>
                 ${name}
           </td>
@@ -882,14 +876,12 @@ function CreateKaisanTable(json)
         var html = `
         <tr class="table_row ${thisMonth}" name='${type}${count}'>
           <td class="align-middle">
-                <input type="checkbox" name='${type}${count}' class="kizou_check" id="${type}_check">
-          </td>
-          <td class="align-middle">
+                <input type="hidden" name='${type}${count}' class="kizou_check" id="${type}_check">
                 <img src="./images/${type}/${imgName}" alt="${name}" class="img-thumbnail" width="59px"><br>
                 ${name}
           </td>
           <td class="align-middle">
-                <img src="./images/fish/shadow/${shadow}.png" alt="" class="img-thumbnail" width="50px"><br>
+                <img src="./images/${type}/shadow/${shadow}.png" alt="" class="img-thumbnail" width="50px"><br>
                 ${shadowName}
           </td>
           <td class="align-middle">${place}</td>
@@ -1064,6 +1056,17 @@ function CheckVisible()
         }
     }
 
+    // 寄贈済は色を変える。
+    $('.kizou_check').each(function(index, element) {
+        if($(this).prop('checked'))
+        {
+            $(this).parent().parent().addClass("table-secondary");
+        }
+        else
+        {
+            $(this).parent().parent().removeClass("table-secondary");
+        }
+    })
 }
 
 function saveAllParam()

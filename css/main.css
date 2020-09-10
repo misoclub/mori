@@ -2,7 +2,7 @@
 html,
 body {
   background-color: #FDFDFD;
-  font-size: 0.5em;
+  font-size: 10px;
 }
 
 .footer {
@@ -25,19 +25,19 @@ body {
 td {
   text-align: center;
   vertical-align: middle;
-  font-size: 0.4em;
+  font-size: 10px;
 }
 
 th {
   text-align: center;
   vertical-align: middle;
-  font-size: 0.4em;
+  font-size: 10px;
 }
 
 tr {
   text-align: center;
   vertical-align: middle;
-  font-size: 0.4em;
+  font-size: 10px;
 }
 
 .sticky_table thead th {
