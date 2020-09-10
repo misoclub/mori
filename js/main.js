@@ -752,7 +752,7 @@ function CreateTable(json)
         var thisMonth = CheckThisMonth(info.season);// 今月までフラグ。
 
         var html = `
-        <tr class="table_row ${thisMonth}">
+        <tr class="table_row ${thisMonth}" name='${type}${count}'>
           <td class="align-middle">
                 <input type="checkbox" name='${type}${count}' class="kizou_check" id="${type}_check">
           </td>
@@ -848,6 +848,19 @@ function MakeSeasonText(array, tanni)
     return text;
 }
 
+// テーブルタッチ。
+$(".table_row").click(function() {
+
+    // フラグを反転させる。
+    var key = $(this).find('input').attr('name');
+    var flag = $('input[name='+key+']').prop('checked');
+    $('input[name='+key+']').prop('checked', !flag);
+
+
+    CheckVisible();    
+    saveAllParam();
+});
+
 // 今月チェック。
 $('#this_month_check').click(function() {
     CheckVisible();    
@@ -864,25 +877,6 @@ $('.kizou_check').click(function() {
     CheckVisible(); 
     saveAllParam();
 });
-
-function saveAllParam()
-{
-    var saveData = {};
-
-    // チェック状態を保存。
-    $('.kizou_check').each(function(index, element) {
-        var name = $(this).attr('name');
-        saveData[name] = $(this).prop('checked');
-    })
-
-    var thisMonth = $('#this_month_check').prop('checked');
-    saveData["thisMonth"] = thisMonth;
-
-    var kizou = $('#kizou_setting_check').prop('checked');
-    saveData["kizou"] = kizou;
-
-    store.set('user_data', saveData);
-}
 
 // 描画切り替え。
 function CheckVisible()
@@ -924,6 +918,25 @@ function CheckVisible()
         }
     }
 
+}
+
+function saveAllParam()
+{
+    var saveData = {};
+
+    // チェック状態を保存。
+    $('.kizou_check').each(function(index, element) {
+        var name = $(this).attr('name');
+        saveData[name] = $(this).prop('checked');
+    })
+
+    var thisMonth = $('#this_month_check').prop('checked');
+    saveData["thisMonth"] = thisMonth;
+
+    var kizou = $('#kizou_setting_check').prop('checked');
+    saveData["kizou"] = kizou;
+
+    store.set('user_data', saveData);
 }
 
 function load()
