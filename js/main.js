@@ -755,16 +755,14 @@ function CreateTable(json)
         <tr class="table_row ${thisMonth}">
           <td>
             <label class="btn">
-              <span>
                 <input type="checkbox" name='${type}${count}' class="kizou_check" id="${type}_check">
-                <img src="./images/${type}/${imgName}" alt="${name}" class="img-thumbnail"><br clear="left">
+                <img src="./images/${type}/${imgName}" alt="${name}" class="img-thumbnail" width="59px"><br clear="left">
                 ${name}
-              </span>
             </label>
           </td>
           <td>
             <label class="btn">
-                <img src="./images/fish/shadow/${shadow}.png" alt="" class="img-thumbnail"><br clear="left">
+                <img src="./images/fish/shadow/${shadow}.png" alt="" class="img-thumbnail" width="50px"><br clear="left">
                 ${shadowName}
             </label>
           </td>
