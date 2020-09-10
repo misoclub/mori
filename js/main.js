@@ -753,20 +753,20 @@ function CreateTable(json)
 
         var html = `
         <tr class="table_row ${thisMonth}">
-          <td>
+          <td class="align-middle">
                 <input type="checkbox" name='${type}${count}' class="kizou_check" id="${type}_check">
           </td>
-          <td>
+          <td class="align-middle">
                 <img src="./images/${type}/${imgName}" alt="${name}" class="img-thumbnail" width="59px"><br>
                 ${name}
           </td>
-          <td>
+          <td class="align-middle">
                 <img src="./images/fish/shadow/${shadow}.png" alt="" class="img-thumbnail" width="50px"><br>
                 ${shadowName}
           </td>
-          <td>${place}</td>
-          <td>${seasonText}</td>
-          <td>${timeText}</td>
+          <td class="align-middle">${place}</td>
+          <td class="align-middle">${seasonText}</td>
+          <td class="align-middle">${timeText}</td>
         </tr>
         `
 
