@@ -754,17 +754,15 @@ function CreateTable(json)
         var html = `
         <tr class="table_row ${thisMonth}">
           <td>
-            <label class="btn">
                 <input type="checkbox" name='${type}${count}' class="kizou_check" id="${type}_check">
-                <img src="./images/${type}/${imgName}" alt="${name}" class="img-thumbnail" width="59px"><br clear="left">
-                ${name}
-            </label>
           </td>
           <td>
-            <label class="btn">
-                <img src="./images/fish/shadow/${shadow}.png" alt="" class="img-thumbnail" width="50px"><br clear="left">
+                <img src="./images/${type}/${imgName}" alt="${name}" class="img-thumbnail" width="59px"><br>
+                ${name}
+          </td>
+          <td>
+                <img src="./images/fish/shadow/${shadow}.png" alt="" class="img-thumbnail" width="50px"><br>
                 ${shadowName}
-            </label>
           </td>
           <td>${place}</td>
           <td>${seasonText}</td>
