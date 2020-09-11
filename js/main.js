@@ -738,7 +738,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_1_i.png",\
         "season":[1,2,3,4,5,6,9,10,11,12],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],\
         "place":"花/空中"\
     },\
     {\
@@ -746,7 +746,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_2_i.png",\
         "season":[3,4,5,6,9,10],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],\
         "place":"花/空中"\
     },\
     {\
@@ -754,7 +754,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_3_i.png",\
         "season":[3,4,5,6,7,8,9],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],\
         "place":"花/空中"\
     },\
     {\
@@ -762,7 +762,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_4_i.png",\
         "season":[3,4,5,6],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],\
         "place":"花(黒/紫/青)/空中"\
     },\
     {\
@@ -770,7 +770,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_5_i.png",\
         "season":[4,5,6,7,8],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],\
         "place":"花/空中"\
     },\
     {\
@@ -778,7 +778,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_6_i.png",\
         "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[8,9,10,11,12,13,14,15,16,17,18,19],\
         "place":"花/空中"\
     },\
     {\
@@ -786,7 +786,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_7_i.png",\
         "season":[5,6,7,8],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],\
         "place":"花/空中"\
     },\
     {\
@@ -794,7 +794,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_8_i.png",\
         "season":[9,10,11],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[4,5,6,7,8,9,10,11,12,13,14,15,16,17],\
         "place":"花/空中"\
     },\
     {\
@@ -802,7 +802,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_9_i.png",\
         "season":[1,2,3,6,7,8,9,12],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[0,1,2,3,4,5,6,7,8,17,18,19,20,21,22,23,24],\
         "place":"花/空中"\
     },\
     {\
@@ -810,7 +810,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_10_i.png",\
         "season":[4,5,6,7,8,9],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[8,9,10,11,12,13,14,15,16,17],\
         "place":"花/空中"\
     },\
     {\
@@ -818,7 +818,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_11_i.png",\
         "season":[1,2,4,5,6,7,8,9,12],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[8,9,10,11,12,13,14,15,16,17],\
         "place":"花/空中"\
     },\
     {\
@@ -826,7 +826,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_12_i.png",\
         "season":[5,6,7,8,9],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[8,9,10,11,12,13,14,15,16],\
         "place":"花/空中"\
     },\
     {\
@@ -834,7 +834,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_13_i.png",\
         "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[0,1,2,3,4,19,20,21,22,23,24],\
         "place":"灯りの近く"\
     },\
     {\
@@ -842,7 +842,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_14_i.png",\
         "season":[4,5,6,7,8,9],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[0,1,2,3,4,19,20,21,22,23,24],\
         "place":"木/ヤシの木"\
     },\
     {\
@@ -850,7 +850,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_15_i.png",\
         "season":[4,5,6,7,8,9],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[8,9,10,11,12,13,14,15,16],\
         "place":"空中"\
     },\
     {\
@@ -858,7 +858,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_16_i.png",\
         "season":[4,5,6,7,8,9,10,11],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[8,9,10,11,12,13,14,15,16,17,18,19],\
         "place":"地上"\
     },\
     {\
@@ -866,7 +866,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_17_i.png",\
         "season":[8,9,10,11],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[8,9,10,11,12,13,14,15,16,17,18,19],\
         "place":"地上"\
     },\
     {\
@@ -874,7 +874,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_18_i.png",\
         "season":[8,9,10,11],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[8,9,10,11,12,13,14,15,16,17,18,19],\
         "place":"地上"\
     },\
     {\
@@ -882,7 +882,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_19_i.png",\
         "season":[7,8,9],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[8,9,10,11,12,13,14,15,16,17],\
         "place":"地上"\
     },\
     {\
@@ -890,7 +890,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_20_i.png",\
         "season":[9,10,11],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[0,1,2,3,4,5,6,7,8,17,18,19,20,21,22,23,24],\
         "place":"地上"\
     },\
     {\
@@ -898,7 +898,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_21_i.png",\
         "season":[9,10],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[0,1,2,3,4,5,6,7,8,17,18,19,20,21,22,23,24],\
         "place":"地上"\
     },\
     {\
@@ -906,7 +906,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_22_i.png",\
         "season":[3,4,5,6,7,8,9,10,11],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[8,9,10,11,12,13,14,15,16,17],\
         "place":"花の上"\
     },\
     {\
@@ -914,7 +914,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_23_i.png",\
         "season":[3,4,5,6,7,8,9,10,11],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[8,9,10,11,12,13,14,15,16,17],\
         "place":"花の上"\
     },\
     {\
@@ -922,7 +922,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_24_i.png",\
         "season":[3,4,5,6,7],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[8,9,10,11,12,13,14,15,16,17],\
         "place":"花の近く"\
     },\
     {\
@@ -938,7 +938,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_26_i.png",\
         "season":[7,8],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[8,9,10,11,12,13,14,15,16,17],\
         "place":"木"\
     },\
     {\
@@ -946,7 +946,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_27_i.png",\
         "season":[7,8],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[8,9,10,11,12,13,14,15,16,17],\
         "place":"木"\
     },\
     {\
@@ -954,7 +954,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_28_i.png",\
         "season":[7,8],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[8,9,10,11,12,13,14,15,16,17],\
         "place":"木"\
     },\
     {\
@@ -962,7 +962,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_29_i.png",\
         "season":[8,9],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[8,9,10,11,12,13,14,15,16,17],\
         "place":"木"\
     },\
     {\
@@ -970,7 +970,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_30_i.png",\
         "season":[7,8],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[4,5,6,7,8,16,17,18,19],\
         "place":"木"\
     },\
     {\
@@ -986,7 +986,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_32_i.png",\
         "season":[9,10],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[8,9,10,11,12,13,14,15,16,17,18,19],\
         "place":"空中"\
     },\
     {\
@@ -994,7 +994,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_33_i.png",\
         "season":[4,5,6,7,8,9,10],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[8,9,10,11,12,13,14,15,16,17],\
         "place":"空中"\
     },\
     {\
@@ -1002,7 +1002,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_34_i.png",\
         "season":[5,6,7,8,9,10],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[8,9,10,11,12,13,14,15,16,17],\
         "place":"空中"\
     },\
     {\
@@ -1018,7 +1018,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_36_i.png",\
         "season":[6],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[0,1,2,3,4,19,20,21,22,23,24],\
         "place":"空中"\
     },\
     {\
@@ -1034,7 +1034,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_38_i.png",\
         "season":[5,6,7,8,9],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[8,9,10,11,12,13,14,15,16,17,18,19],\
         "place":"水面"\
     },\
     {\
@@ -1042,7 +1042,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_39_i.png",\
         "season":[5,6,7,8,9],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[8,9,10,11,12,13,14,15,16,17,18,19],\
         "place":"水面"\
     },\
     {\
@@ -1050,7 +1050,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_40_i.png",\
         "season":[4,5,6,7,8,9],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[0,1,2,3,4,5,6,7,8,19,20,21,22,23,24],\
         "place":"水面"\
     },\
     {\
@@ -1066,7 +1066,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_42_i.png",\
         "season":[3,4,5,6,7,8,9,10],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[0,1,2,3,4,5,6,7,8,19,20,21,22,23,24],\
         "place":"花の上"\
     },\
     {\
@@ -1074,7 +1074,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_43_i.png",\
         "season":[3,4,5,6,10],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[8,9,10,11,12,13,14,15,16,17],\
         "place":"花の上"\
     },\
     {\
@@ -1146,7 +1146,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_52_i.png",\
         "season":[7,8],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[0,1,2,3,4,5,6,7,8,23,24],\
         "place":"木/ヤシの木"\
     },\
     {\
@@ -1162,7 +1162,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_54_i.png",\
         "season":[6,7,8,9],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[0,1,2,3,4,5,6,7,8,17,18,19,20,21,22,23,24],\
         "place":"ヤシの木"\
     },\
     {\
@@ -1186,7 +1186,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_57_i.png",\
         "season":[7,8],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[0,1,2,3,4,5,6,7,8,23,24],\
         "place":"木/ヤシの木"\
     },\
     {\
@@ -1194,7 +1194,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_58_i.png",\
         "season":[6,7,8,9],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[0,1,2,3,4,5,6,7,8,19,20,21,22,23,24],\
         "place":"木/ヤシの木"\
     },\
     {\
@@ -1202,7 +1202,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_59_i.png",\
         "season":[7,8],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[0,1,2,3,4,5,6,7,8,17,18,19,20,21,22,23,24],\
         "place":"ヤシの木"\
     },\
     {\
@@ -1210,7 +1210,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_60_i.png",\
         "season":[7,8],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[0,1,2,3,4,5,6,7,8,17,18,19,20,21,22,23,24],\
         "place":"ヤシの木"\
     },\
     {\
@@ -1218,7 +1218,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_61_i.png",\
         "season":[7,8],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[0,1,2,3,4,5,6,7,8,17,18,19,20,21,22,23,24],\
         "place":"ヤシの木"\
     },\
     {\
@@ -1226,7 +1226,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_62_i.png",\
         "season":[7,8],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[0,1,2,3,4,5,6,7,8,17,18,19,20,21,22,23,24],\
         "place":"木/ヤシの木"\
     },\
     {\
@@ -1234,7 +1234,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_63_i.png",\
         "season":[7,8],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[0,1,2,3,4,5,6,7,8,17,18,19,20,21,22,23,24],\
         "place":"ヤシの木"\
     },\
     {\
@@ -1242,7 +1242,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_64_i.png",\
         "season":[7,8],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[0,1,2,3,4,5,6,7,8,17,18,19,20,21,22,23,24],\
         "place":"ヤシの木"\
     },\
     {\
@@ -1250,7 +1250,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_65_i.png",\
         "season":[7,8],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[0,1,2,3,4,5,6,7,8,17,18,19,20,21,22,23,24],\
         "place":"ヤシの木"\
     },\
     {\
@@ -1258,7 +1258,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_66_i.png",\
         "season":[7,8,9,10,11],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[4,5,6,7,8,17,18,19],\
         "place":"木/ヤシの木"\
     },\
     {\
@@ -1290,7 +1290,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_70_i.png",\
         "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[0,1,2,3,4,5,6,7,8,19,20,21,22,23,24],\
         "place":"地上"\
     },\
     {\
@@ -1314,7 +1314,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_73_i.png",\
         "season":[6,7,8,9],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[0,1,2,3,4,17,18,19,20,21,22,23,24],\
         "place":"空中"\
     },\
     {\
@@ -1338,7 +1338,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_76_i.png",\
         "season":[1,2,3,4,5,6,9,10,11,12],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,23,24],\
         "place":"地上"\
     },\
     {\
@@ -1346,7 +1346,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_77_i.png",\
         "season":[1,2,3,4,5,6,9,10,11,12],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[16,17,18,19,20,21,22,23],\
         "place":"地上"\
     },\
     {\
@@ -1354,7 +1354,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_78_i.png",\
         "season":[1,2,3,4,5,6,7,8,9,10,11,12],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[0,1,2,3,4,5,6,7,8,19,20,21,22,23,24],\
         "place":"木"\
     },\
     {\
@@ -1362,7 +1362,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_79_i.png",\
         "season":[1,2,3,4,11,12],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[0,1,2,3,4,19,20,21,22,23,24],\
         "place":"地上"\
     },\
     {\
@@ -1370,7 +1370,7 @@ const mushi_json = '\
         "type": "mushi",\
         "img": "musi_80_i.png",\
         "season":[5,6,7,8,9,10],\
-        "time":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],\
+        "time":[0,1,2,3,4,19,20,21,22,23,24],\
         "place":"地上"\
     }\
 ]';
@@ -1718,13 +1718,17 @@ function CreateFishTable(json)
         var seasonText = MakeSeasonText(info.season, "月");
         var timeText = MakeSeasonText(info.time, "時");
         var thisMonth = CheckThisMonth(info.season);// 今月までフラグ。
+        var thisMonthPop = CheckThisMonthPop(info.season); // 今月出現するフラグ。
+        var nowPop = CheckNowPop(info.time) ? '<br><font color="FF0000">出現中</font>' : '';
+        var nowPopClass = CheckNowPop(info.time) ? 'table-info' : '';
 
         var html = `
-        <tr class="table_row ${thisMonth}" name='${type}${count}'>
-          <td class="align-middle">
+        <tr class="table_row ${thisMonth} ${thisMonthPop}" name='${type}${count}'>
+          <td class="align-middle ${nowPopClass}">
                 <input type="hidden" name='${type}${count}' class="kizou_check" id="${type}_check">
                 <img src="./images/${type}/${imgName}" alt="${name}" class="img-thumbnail" width="59px"><br>
                 ${name}
+                ${nowPop}
           </td>
           <td class="align-middle">
                 <img src="./images/${type}/shadow/${shadow}.png" alt="" class="img-thumbnail" width="50px"><br>
@@ -1754,13 +1758,17 @@ function CreateMushiTable(json)
         var seasonText = MakeSeasonText(info.season, "月");
         var timeText = MakeSeasonText(info.time, "時");
         var thisMonth = CheckThisMonth(info.season);// 今月までフラグ。
+        var thisMonthPop = CheckThisMonthPop(info.season); // 今月出現するフラグ。
+        var nowPop = CheckNowPop(info.time) ? '<br><font color="FF0000">出現中</font>' : '';
+        var nowPopClass = CheckNowPop(info.time) ? 'table-info' : '';
 
         var html = `
-        <tr class="table_row ${thisMonth}" name='${type}${count}'>
-          <td class="align-middle">
+        <tr class="table_row ${thisMonth} ${thisMonthPop}" name='${type}${count}'>
+          <td class="align-middle ${nowPopClass}">
                 <input type="hidden" name='${type}${count}' class="kizou_check" id="${type}_check">
                 <img src="./images/${type}/${imgName}" alt="${name}" class="img-thumbnail" width="59px"><br>
                 ${name}
+                ${nowPop}
           </td>
           <td class="align-middle">${place}</td>
           <td class="align-middle">${seasonText}</td>
@@ -1788,13 +1796,17 @@ function CreateKaisanTable(json)
         var seasonText = MakeSeasonText(info.season, "月");
         var timeText = MakeSeasonText(info.time, "時");
         var thisMonth = CheckThisMonth(info.season);// 今月までフラグ。
+        var thisMonthPop = CheckThisMonthPop(info.season); // 今月出現するフラグ。
+        var nowPop = CheckNowPop(info.time) ? '<br><font color="FF0000">出現中</font>' : '';
+        var nowPopClass = CheckNowPop(info.time) ? 'table-info' : '';
 
         var html = `
-        <tr class="table_row ${thisMonth}" name='${type}${count}'>
-          <td class="align-middle">
+        <tr class="table_row ${thisMonth} ${thisMonthPop}" name='${type}${count}'>
+          <td class="align-middle ${nowPopClass}">
                 <input type="hidden" name='${type}${count}' class="kizou_check" id="${type}_check">
                 <img src="./images/${type}/${imgName}" alt="${name}" class="img-thumbnail" width="59px"><br>
                 ${name}
+                ${nowPop}
           </td>
           <td class="align-middle">
                 <img src="./images/${type}/shadow/${shadow}.png" alt="" class="img-thumbnail" width="50px"><br>
@@ -1808,6 +1820,30 @@ function CreateKaisanTable(json)
         $('#kaisan_table').append(html);
         count++;
     }
+}
+
+// 現在の時間に出現するか。
+function CheckNowPop(array)
+{
+    var today = new Date();
+    var pop = array.indexOf(today.getHours());
+    return (pop >= 0);
+}
+
+function CheckThisMonthPop(array)
+{
+    // 今月まで。
+    var today = new Date();
+    var thisMonth = (today.getMonth()+1);
+
+    // 今月出現する。
+    var thisMonthResult = array.indexOf(thisMonth);
+
+    if(thisMonthResult >= 0)
+    {
+        return "";
+    }
+    return "NotThisMonthPop";
 }
 
 function CheckThisMonth(array)
@@ -1829,7 +1865,7 @@ function CheckThisMonth(array)
     // 今月まで。
     if(thisMonthResult >= 0 && nextMonthResult == -1)
     {
-        return "ThisMonth";
+        return "";
     }
     return "NotThisMonth";
 }
@@ -1896,7 +1932,112 @@ $(".table_row").click(function() {
     saveAllParam();
 });
 
+// 描画切り替え。
+function CheckVisible()
+{
+    // とりあえず全部表示。
+    $('.table_row').show();
+
+    // 今月までチェック。今月までじゃないやつを消す。
+    var thisMonthPop = $('#this_month_pop_check').prop('checked');
+    if(thisMonthPop)
+    {
+        $('.NotThisMonthPop').hide();
+    }
+
+    // 今月までチェック。今月までじゃないやつを消す。
+    var thisMonth = $('#this_month_check').prop('checked');
+    if(thisMonth)
+    {
+        $('.NotThisMonth').hide();
+    }
+
+    // 現在の時間帯に出現するやつは色変え。
+    // $('.NowTimePop').each(function(index, element)
+    // {
+    //     $(this).parent().parent().addClass("table-secondary");
+    // })
+
+    // 寄贈チェック。寄贈済のやつを消す。
+    var kizou = $('#kizou_setting_check').prop('checked');
+
+    // 寄贈済は色を変える。
+    $('.kizou_check').each(function(index, element) {
+        if($(this).prop('checked'))
+        {
+            $(this).parent().parent().addClass("table-secondary");
+            // 消すチェックがついている場合は消す。
+            if(kizou)
+            {
+                $(this).parent().parent().hide();
+            }
+        }
+        else
+        {
+            $(this).parent().parent().removeClass("table-secondary");
+        }
+    })
+}
+
+function saveAllParam()
+{
+    var saveData = {};
+
+    // チェック状態を保存。
+    $('.kizou_check').each(function(index, element) {
+        var name = $(this).attr('name');
+        saveData[name] = $(this).prop('checked');
+    })
+
+    var thisMonth = $('#this_month_check').prop('checked');
+    saveData["thisMonth"] = thisMonth;
+
+    var thisMonthPop = $('#this_month_pop_check').prop('checked');
+    saveData["thisMonthPop"] = thisMonthPop;
+
+    var kizou = $('#kizou_setting_check').prop('checked');
+    saveData["kizou"] = kizou;
+
+    store.set('user_data', saveData);
+}
+
+function loadAllParam()
+{
+    var saveData = store.get('user_data');
+
+    // データが存在するならせっせとフォームにセットしにいく。
+    if (!saveData)
+    {
+        return;
+    }
+
+    // 各データのチェック状態を復活。
+    for (let key in saveData) {
+      $('input[name='+key+']').prop('checked', saveData[key]);
+    }
+
+    $('#this_month_check').prop('checked', saveData["thisMonth"]);
+
+    $('#this_month_pop_check').prop('checked', saveData["thisMonthPop"]);
+
+    $('#kizou_setting_check').prop('checked', saveData["kizou"]);
+}
+
+function initialize()
+{
+    // 前回のデータ読み込み。
+    loadAllParam();
+
+    // 表示チェック。
+    CheckVisible();
+}
+
 // 今月チェック。
+$('#this_month_pop_check').click(function() {
+    CheckVisible();    
+    saveAllParam();
+});
+
 $('#this_month_check').click(function() {
     CheckVisible();    
     saveAllParam();
@@ -1930,104 +2071,3 @@ $('#tab_kaisan').click(function(){
     $('#main_mushi').hide();
     $('#main_kaisan').show();
 });
-
-// 描画切り替え。
-function CheckVisible()
-{
-    // 今月までチェック。今月までじゃないやつを消す。
-    var thisMonth = $('#this_month_check').prop('checked');
-    if(thisMonth)
-    {
-        $('.NotThisMonth').hide();
-    }
-    else
-    {
-        $('.NotThisMonth').show();
-    }
-
-    // 寄贈チェック。寄贈済のやつを消す。
-    var kizou = $('#kizou_setting_check').prop('checked');
-    if(kizou)
-    {
-        // チェックついてるやつは消す。
-        $('.kizou_check').each(function(index, element) {
-            if($(this).prop('checked'))
-            {
-                $(this).parent().parent().hide();
-            } 
-        })
-    }
-    else
-    {
-        // 今月終了分だけ表示の場合は、今月分だけを復活
-        if(thisMonth)
-        {
-            $('.ThisMonth').show();
-        }
-        // 今月とかも関係ない場合は全部復活。
-        else
-        {
-            $('.table_row').show();
-        }
-    }
-
-    // 寄贈済は色を変える。
-    $('.kizou_check').each(function(index, element) {
-        if($(this).prop('checked'))
-        {
-            $(this).parent().parent().addClass("table-secondary");
-        }
-        else
-        {
-            $(this).parent().parent().removeClass("table-secondary");
-        }
-    })
-}
-
-function saveAllParam()
-{
-    var saveData = {};
-
-    // チェック状態を保存。
-    $('.kizou_check').each(function(index, element) {
-        var name = $(this).attr('name');
-        saveData[name] = $(this).prop('checked');
-    })
-
-    var thisMonth = $('#this_month_check').prop('checked');
-    saveData["thisMonth"] = thisMonth;
-
-    var kizou = $('#kizou_setting_check').prop('checked');
-    saveData["kizou"] = kizou;
-
-    store.set('user_data', saveData);
-}
-
-function load()
-{
-    var saveData = store.get('user_data');
-
-    // データが存在するならせっせとフォームにセットしにいく。
-    if (!saveData)
-    {
-        return;
-    }
-
-    // 各データのチェック状態を復活。
-    for (let key in saveData) {
-      $('input[name='+key+']').prop('checked', saveData[key]);
-    }
-
-    $('#this_month_check').prop('checked', saveData["thisMonth"]);
-
-    $('#kizou_setting_check').prop('checked', saveData["kizou"]);
-}
-
-function initialize()
-{
-    // 前回のデータ読み込み。
-    load();
-
-    // 表示チェック。
-    CheckVisible();
-}
