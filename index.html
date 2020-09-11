@@ -38,23 +38,28 @@
     });
   </script>
  -->
+
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="./"><img src="images/icon.png" width="32" height="32" class="d-inline-block align-center" alt="">  森コンプチェッカー</a>
+
+<div class="dropdown">
+  <button class="btn btn-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" id="cacheclear" href="#">キャッシュクリア</a>
+  </div>
+</div>
+
+    </nav>
+
+
+
     <div class="container">
 
     <div class="row">
     <div class="col">
 
-  <!-- 4個分のタブ -->
-  <ul class="nav nav-pills nav-fill">
-    <li class="nav-item">
-      <a href="#" class="nav-link active" data-toggle="tab" id="tab_sakana">魚</a>
-    </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link" data-toggle="tab" id="tab_mushi">虫</a>
-    </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link" data-toggle="tab" id="tab_kaisan">海の幸</a>
-    </li>
-  </ul>
 
 
 <table class="table table-borderless table-info">
@@ -81,6 +86,21 @@
     </tr>
   </tbody>
 </table>
+
+
+  <!-- 4個分のタブ -->
+  <ul class="nav nav-tabs nav-fill">
+    <li class="nav-item">
+      <a href="#" class="nav-link active" data-toggle="tab" id="tab_sakana">魚</a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link" data-toggle="tab" id="tab_mushi">虫</a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link" data-toggle="tab" id="tab_kaisan">海の幸</a>
+    </li>
+  </ul>
+
 
   <!-- 写真部分 -->
   <div class="tab-content">

@@ -2071,3 +2071,9 @@ $('#tab_kaisan').click(function(){
     $('#main_mushi').hide();
     $('#main_kaisan').show();
 });
+
+$('#cacheclear').click(function() {
+    alert("保存してあるデータを削除します");
+    store.clearAll();
+    location.reload();
+});
