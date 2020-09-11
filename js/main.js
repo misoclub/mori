@@ -2093,23 +2093,57 @@ $('.kizou_check').click(function() {
     saveAllParam();
 });
 
+nowTab = 0;
+
 $('#tab_sakana').click(function(){
-    $('#main_sakana').show();
-    $('#main_mushi').hide();
-    $('#main_kaisan').hide();
+    nowTab = 0;
+    ChangeTab();
 });
 
 $('#tab_mushi').click(function(){
-    $('#main_sakana').hide();
-    $('#main_mushi').show();
-    $('#main_kaisan').hide();
+    nowTab = 1;
+    ChangeTab();
 });
 
 $('#tab_kaisan').click(function(){
-    $('#main_sakana').hide();
-    $('#main_mushi').hide();
-    $('#main_kaisan').show();
+    nowTab = 2;
+    ChangeTab();
 });
+
+function ChangeTab()
+{
+    if(nowTab == 0)
+    {
+        $('#main_sakana').show();
+        $('#main_mushi').hide();
+        $('#main_kaisan').hide();
+
+        $('#tab_sakana').addClass("active");
+        $('#tab_mushi').removeClass("active");
+        $('#tab_kaisan').removeClass("active");
+    }
+    else if(nowTab == 1)
+    {
+        $('#main_sakana').hide();
+        $('#main_mushi').show();
+        $('#main_kaisan').hide();
+
+        $('#tab_sakana').removeClass("active");
+        $('#tab_mushi').addClass("active");
+        $('#tab_kaisan').removeClass("active");
+    }
+    else if(nowTab == 2)
+    {
+        $('#main_sakana').hide();
+        $('#main_mushi').hide();
+        $('#main_kaisan').show();
+
+        $('#tab_sakana').removeClass("active");
+        $('#tab_mushi').removeClass("active");
+        $('#tab_kaisan').addClass("active");
+    }
+}
+
 
 $('#cacheclear').click(function() {
     alert("保存してあるデータを削除します");
@@ -2123,4 +2157,98 @@ $('.change_month').click(function() {
     nowMonth = Number($(this).attr("value"));
 
     initialize();
+});
+
+
+
+
+/**
+* @function HTMLElement.prototype.swipe　HTML要素のスワイプを検知する
+*/
+ if(!HTMLElement.prototype.swipe){
+  Object.defineProperty(HTMLElement.prototype, "swipe", {
+    configurable: true,
+    enumerable: false,
+    writable: true,
+    /**
+    * @string direction  スワイプの方向(left, right, up, down)
+    * @function callback  スワイプイベント時に実行するコールバック関数
+    * @int sensitivity  スワイプの感度。値が大きいほど小さい動きで発火する。デフォルトは5 (画面サイズ/5のスワイプで発火)
+    */
+    value: function(direction,callback,sensitivity) {
+      const self = this;
+      const sens =  Object.prototype.toString.call(sensitivity)!=='[object Number]' || sensitivity <= 0 ? 5 : sensitivity;
+      switch(direction){
+        case 'left':
+          self.addEventListener('touchstart', function (event) {
+            self.removeEventListener("touchstart",null,false); //2回目以降触れただけで発火しないよう、イベントリスナを解除
+            var position = event.changedTouches[0].pageX;
+            self.addEventListener('touchend', function (event) {
+              self.removeEventListener("touchend",null,false);
+              if (event.changedTouches[0].pageX < position - screen.width / sens){
+                callback(self);
+              }
+              position = 0;
+            });
+          },false);
+          break;
+        case 'right':
+          self.addEventListener('touchstart', function (event) {
+            self.removeEventListener("touchstart",null,false);  
+            var position = event.changedTouches[0].pageX;
+            self.addEventListener('touchend', function (event) {
+              self.removeEventListener("touchend",null,false);  
+              if(event.changedTouches[0].pageX > position + screen.width / sens){
+                callback(self);
+              }
+              position = screen.width;
+            });
+          },false);
+          break;
+        case 'up':
+          self.addEventListener('touchstart', function (event) {
+            self.removeEventListener("touchstart",null,false);  
+            var position = event.changedTouches[0].pageY;
+            self.addEventListener('touchend', function (event) {
+              self.removeEventListener("touchend",null,false); 
+              if(event.changedTouches[0].pageY < position - screen.height / sens){
+                callback(self);
+              }
+              position = 0;
+            });
+          },false);
+          break;
+        case 'down':
+          self.addEventListener('touchstart', function (event) {
+            self.removeEventListener("touchstart",null,false);  
+            var position = event.changedTouches[0].pageY;
+            self.addEventListener('touchend', function (event) {
+              self.removeEventListener("touchend",null,false); 
+              if(event.changedTouches[0].pageY > position + screen.height / sens){
+                callback(self);
+              }
+              position = screen.height;
+            });
+          },false);
+          break;
+      }
+    }
+  });
+}
+
+$('.wall').each(function(){
+    this.swipe('left',function(dom){
+        nowTab += 1;
+        nowTab %= 3;
+        console.log(nowTab);
+        ChangeTab();
+    },10);  //<-- 画面サイズ/10の動作で発火
+
+    this.swipe('right',function(dom){
+        nowTab -= 1;
+        console.log(nowTab);
+        nowTab = nowTab < 0 ? 2 : nowTab;
+        console.log(nowTab);
+        ChangeTab();
+    },10);
 });
