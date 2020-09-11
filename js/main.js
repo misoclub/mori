@@ -2238,17 +2238,12 @@ $('.change_month').click(function() {
 
 $('.wall').each(function(){
     this.swipe('left',function(dom){
-        nowTab += 1;
-        nowTab %= 3;
-        console.log(nowTab);
+        nowTab = (nowTab + 1) % 3;
         ChangeTab();
-    },10);  //<-- 画面サイズ/10の動作で発火
+    },5);  //<-- 画面サイズ/10の動作で発火
 
     this.swipe('right',function(dom){
-        nowTab -= 1;
-        console.log(nowTab);
-        nowTab = nowTab < 0 ? 2 : nowTab;
-        console.log(nowTab);
+        nowTab = nowTab - 1 < 0 ? 2 : nowTab - 1;
         ChangeTab();
-    },10);
+    },5);
 });
