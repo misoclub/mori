@@ -1,7 +1,3 @@
-
-// 表示中の月。
-nowMonth = 0;
-
 // shadow
 // 0:極小
 // 1:小
@@ -1701,16 +1697,6 @@ const kaisan_json = '\
     }\
 ]';
 
-// 初期値は今月を入れておく。1少ない値になるので注意。
-var today = new Date();
-nowMonth = today.getMonth();
-$('.kongetsu').html('<strong>'+(nowMonth+1)+'月出現中のみ表示</strong>');
-$('.kongetsu_made').html('<strong>'+(nowMonth+1)+'月までのみ表示</strong>');
-
-CreateFishTable(json);
-CreateMushiTable(mushi_json);
-CreateKaisanTable(kaisan_json);
-
 function CreateFishTable(json)
 {
     const data = JSON.parse(json);
@@ -1963,19 +1949,6 @@ function MakeSeasonText(array, tanni)
     return text;
 }
 
-// テーブルタッチ。
-$(".table_row").click(function() {
-
-    // フラグを反転させる。
-    var key = $(this).find('input').attr('name');
-    var flag = $('input[name='+key+']').prop('checked');
-    $('input[name='+key+']').prop('checked', !flag);
-
-
-    CheckVisible();    
-    saveAllParam();
-});
-
 // 描画切り替え。
 function CheckVisible()
 {
@@ -1983,27 +1956,21 @@ function CheckVisible()
     $('.table_row').show();
 
     // 今月までチェック。今月までじゃないやつを消す。
-    var thisMonthPop = $('#this_month_pop_check').prop('checked');
+    var thisMonthPop = $('#setting_this_month_pop').prop('checked');
     if(thisMonthPop)
     {
         $('.NotThisMonthPop').hide();
     }
 
     // 今月までチェック。今月までじゃないやつを消す。
-    var thisMonth = $('#this_month_check').prop('checked');
+    var thisMonth = $('#setting_this_month').prop('checked');
     if(thisMonth)
     {
         $('.NotThisMonth').hide();
     }
 
-    // 現在の時間帯に出現するやつは色変え。
-    // $('.NowTimePop').each(function(index, element)
-    // {
-    //     $(this).parent().parent().addClass("table-secondary");
-    // })
-
     // 寄贈チェック。寄贈済のやつを消す。
-    var kizou = $('#kizou_setting_check').prop('checked');
+    var kizou = $('#setting_kizou_check').prop('checked');
 
     // 寄贈済は色を変える。
     $('.kizou_check').each(function(index, element) {
@@ -2033,14 +2000,15 @@ function saveAllParam()
         saveData[name] = $(this).prop('checked');
     })
 
-    var thisMonth = $('#this_month_check').prop('checked');
-    saveData["thisMonth"] = thisMonth;
+    // 各種設定を保存。
+    var thisMonth = $('#setting_this_month').prop('checked');
+    saveData["setting_this_month"] = thisMonth;
 
-    var thisMonthPop = $('#this_month_pop_check').prop('checked');
-    saveData["thisMonthPop"] = thisMonthPop;
+    var thisMonthPop = $('#setting_this_month_pop').prop('checked');
+    saveData["setting_this_month_pop"] = thisMonthPop;
 
-    var kizou = $('#kizou_setting_check').prop('checked');
-    saveData["kizou"] = kizou;
+    var kizou = $('#setting_kizou_check').prop('checked');
+    saveData["setting_kizou_check"] = kizou;
 
     store.set('user_data', saveData);
 }
@@ -2060,35 +2028,62 @@ function loadAllParam()
       $('input[name='+key+']').prop('checked', saveData[key]);
     }
 
-    $('#this_month_check').prop('checked', saveData["thisMonth"]);
+    // 各種設定を読み込み。
+    $('#setting_this_month').prop('checked', saveData["setting_this_month"]);
 
-    $('#this_month_pop_check').prop('checked', saveData["thisMonthPop"]);
+    $('#setting_this_month_pop').prop('checked', saveData["setting_this_month_pop"]);
 
-    $('#kizou_setting_check').prop('checked', saveData["kizou"]);
+    $('#setting_kizou_check').prop('checked', saveData["setting_kizou_check"]);
 }
+
+// 初期値は今月を入れておく。1少ない値になるので注意。
+var today = new Date();
+nowMonth = today.getMonth();
 
 function initialize()
 {
+    $('.kongetsu').html('<strong>'+(nowMonth+1)+'月出現中のみ表示</strong>');
+    $('.kongetsu_made').html('<strong>'+(nowMonth+1)+'月までのみ表示</strong>');
+
+    ClearAllTable();
+
+    CreateFishTable(json);
+    CreateMushiTable(mushi_json);
+    CreateKaisanTable(kaisan_json);
+
     // 前回のデータ読み込み。
     loadAllParam();
 
     // 表示チェック。
     CheckVisible();
+
+    // テーブルタッチ。テーブルはあとから生まれるのでこのタイミングでセット。
+    $(".table_row").click(function() {
+
+        // フラグを反転させる。
+        var key = $(this).find('input').attr('name');
+        var flag = $('input[name='+key+']').prop('checked');
+        $('input[name='+key+']').prop('checked', !flag);
+
+
+        CheckVisible();    
+        saveAllParam();
+    });
 }
 
 // 今月チェック。
-$('#this_month_pop_check').click(function() {
+$('#setting_this_month_pop').click(function() {
     CheckVisible();    
     saveAllParam();
 });
 
-$('#this_month_check').click(function() {
+$('#setting_this_month').click(function() {
     CheckVisible();    
     saveAllParam();
 });
 
 // 寄贈済チェック。
-$('#kizou_setting_check').click(function() {
+$('#setting_kizou_check').click(function() {
     CheckVisible();    
     saveAllParam();
 });
@@ -2122,19 +2117,10 @@ $('#cacheclear').click(function() {
     location.reload();
 });
 
+// 表示月切り替え。
 $('.change_month').click(function() {
     // 表示月変更。
     nowMonth = Number($(this).attr("value"));
 
-    $('.kongetsu').html('<strong>'+(nowMonth+1)+'月出現中のみ表示</strong>');
-    $('.kongetsu_made').html('<strong>'+(nowMonth+1)+'月までのみ表示</strong>');
-
-    ClearAllTable();
-
-    // 各種テーブル作り直し。
-    CreateFishTable(json);
-    CreateMushiTable(mushi_json);
-    CreateKaisanTable(kaisan_json);
-
-    CheckVisible();
+    initialize();
 });
