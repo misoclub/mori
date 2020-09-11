@@ -1876,6 +1876,21 @@ function MakeSeasonText(array, tanni)
     var oldMonth = -1;
     var text = "";
 
+    if(tanni == "月")
+    {
+        if(array.length == 12)
+        {
+            return "いつでも"
+        }
+    }
+    else if(tanni == "時")
+    {
+        if(array.length == 25)
+        {
+            return "いつでも"
+        }
+    }
+
     var tmpStartMonth = "";
     var tmpEndMonth = "";
     for(var month of array)
@@ -1895,7 +1910,7 @@ function MakeSeasonText(array, tanni)
         {
             if (tmpStartMonth !== "" && tmpEndMonth !== "")
             {
-                text += tmpStartMonth + "〜" + tmpEndMonth + ",<br>";
+                text += tmpStartMonth + "〜" + tmpEndMonth + "<br>";
             }
             else if(tmpStartMonth !== "")
             {
