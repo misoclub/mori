@@ -1,4 +1,7 @@
 
+// 表示中の月。
+nowMonth = 0;
+
 // shadow
 // 0:極小
 // 1:小
@@ -1698,6 +1701,12 @@ const kaisan_json = '\
     }\
 ]';
 
+// 初期値は今月を入れておく。1少ない値になるので注意。
+var today = new Date();
+nowMonth = today.getMonth();
+$('.kongetsu').html('<strong>'+(nowMonth+1)+'月出現中のみ表示</strong>');
+$('.kongetsu_made').html('<strong>'+(nowMonth+1)+'月までのみ表示</strong>');
+
 CreateFishTable(json);
 CreateMushiTable(mushi_json);
 CreateKaisanTable(kaisan_json);
@@ -1705,6 +1714,10 @@ CreateKaisanTable(kaisan_json);
 function CreateFishTable(json)
 {
     const data = JSON.parse(json);
+
+    // 現在参照中の月を生成。
+    var currentDate = new Date();
+    var targetDate = new Date(currentDate.getFullYear(), nowMonth, currentDate.getDate());
 
     var count = 0;
     for (var info of data) {
@@ -1717,8 +1730,8 @@ function CreateFishTable(json)
         var shadowName = shadowNameList[shadow];
         var seasonText = MakeSeasonText(info.season, "月");
         var timeText = MakeSeasonText(info.time, "時");
-        var thisMonth = CheckThisMonth(info.season);// 今月までフラグ。
-        var thisMonthPop = CheckThisMonthPop(info.season); // 今月出現するフラグ。
+        var thisMonth = CheckThisMonth(info.season, targetDate);// 今月までフラグ。
+        var thisMonthPop = CheckThisMonthPop(info.season, targetDate); // 今月出現するフラグ。
         var nowPop = CheckNowPop(info.time) ? '<br><font color="FF0000">出現中</font>' : '';
         var nowPopClass = CheckNowPop(info.time) ? 'table-info' : '';
 
@@ -1749,6 +1762,10 @@ function CreateMushiTable(json)
 {
     const data = JSON.parse(json);
 
+    // 現在参照中の月を生成。
+    var currentDate = new Date();
+    var targetDate = new Date(currentDate.getFullYear(), nowMonth, currentDate.getDate());
+
     var count = 0;
     for (var info of data) {
         var name = info.name;
@@ -1757,8 +1774,8 @@ function CreateMushiTable(json)
         var place = info.place;
         var seasonText = MakeSeasonText(info.season, "月");
         var timeText = MakeSeasonText(info.time, "時");
-        var thisMonth = CheckThisMonth(info.season);// 今月までフラグ。
-        var thisMonthPop = CheckThisMonthPop(info.season); // 今月出現するフラグ。
+        var thisMonth = CheckThisMonth(info.season, targetDate);// 今月までフラグ。
+        var thisMonthPop = CheckThisMonthPop(info.season, targetDate); // 今月出現するフラグ。
         var nowPop = CheckNowPop(info.time) ? '<br><font color="FF0000">出現中</font>' : '';
         var nowPopClass = CheckNowPop(info.time) ? 'table-info' : '';
 
@@ -1785,6 +1802,10 @@ function CreateKaisanTable(json)
 {
     const data = JSON.parse(json);
 
+    // 現在参照中の月を生成。
+    var currentDate = new Date();
+    var targetDate = new Date(currentDate.getFullYear(), nowMonth, currentDate.getDate());
+
     var count = 0;
     for (var info of data) {
         var name = info.name;
@@ -1795,8 +1816,8 @@ function CreateKaisanTable(json)
         var shadowName = shadowNameList[shadow];
         var seasonText = MakeSeasonText(info.season, "月");
         var timeText = MakeSeasonText(info.time, "時");
-        var thisMonth = CheckThisMonth(info.season);// 今月までフラグ。
-        var thisMonthPop = CheckThisMonthPop(info.season); // 今月出現するフラグ。
+        var thisMonth = CheckThisMonth(info.season, targetDate);// 今月までフラグ。
+        var thisMonthPop = CheckThisMonthPop(info.season, targetDate); // 今月出現するフラグ。
         var nowPop = CheckNowPop(info.time) ? '<br><font color="FF0000">出現中</font>' : '';
         var nowPopClass = CheckNowPop(info.time) ? 'table-info' : '';
 
@@ -1822,6 +1843,14 @@ function CreateKaisanTable(json)
     }
 }
 
+// すべてのテーブルの要素を消す。
+function ClearAllTable()
+{
+    $('#fish_table').empty();
+    $('#mushi_table').empty();
+    $('#kaisan_table').empty();
+}
+
 // 現在の時間に出現するか。
 function CheckNowPop(array)
 {
@@ -1830,10 +1859,10 @@ function CheckNowPop(array)
     return (pop >= 0);
 }
 
-function CheckThisMonthPop(array)
+function CheckThisMonthPop(array, date)
 {
     // 今月まで。
-    var today = new Date();
+    var today = date;
     var thisMonth = (today.getMonth()+1);
 
     // 今月出現する。
@@ -1846,10 +1875,10 @@ function CheckThisMonthPop(array)
     return "NotThisMonthPop";
 }
 
-function CheckThisMonth(array)
+function CheckThisMonth(array, date)
 {
     // 今月まで。
-    var today = new Date();
+    var today = date;
     var thisMonth = (today.getMonth()+1);
 
     // 来月。
@@ -2091,4 +2120,21 @@ $('#cacheclear').click(function() {
     alert("保存してあるデータを削除します");
     store.clearAll();
     location.reload();
+});
+
+$('.change_month').click(function() {
+    // 表示月変更。
+    nowMonth = Number($(this).attr("value"));
+
+    $('.kongetsu').html('<strong>'+(nowMonth+1)+'月出現中のみ表示</strong>');
+    $('.kongetsu_made').html('<strong>'+(nowMonth+1)+'月までのみ表示</strong>');
+
+    ClearAllTable();
+
+    // 各種テーブル作り直し。
+    CreateFishTable(json);
+    CreateMushiTable(mushi_json);
+    CreateKaisanTable(kaisan_json);
+
+    CheckVisible();
 });
