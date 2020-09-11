@@ -1718,7 +1718,7 @@ function CreateFishTable(json)
         var timeText = MakeSeasonText(info.time, "時");
         var thisMonth = CheckThisMonth(info.season, targetDate);// 今月までフラグ。
         var thisMonthPop = CheckThisMonthPop(info.season, targetDate); // 今月出現するフラグ。
-        var nowPop = CheckNowPop(info.time) ? '<br><font color="FF0000">出現中</font>' : '';
+        var nowPop = CheckNowPop(info.time) ? '<font color="FF0000">出現中</font>' : '';
         var nowPopClass = CheckNowPop(info.time) ? 'table-info' : '';
 
         var html = `
@@ -1726,12 +1726,12 @@ function CreateFishTable(json)
           <td class="align-middle ${nowPopClass}">
                 <input type="hidden" name='${type}${count}' class="kizou_check" id="${type}_check">
                 <img src="./images/${type}/${imgName}" alt="${name}" class="img-thumbnail" width="59px"><br>
-                ${name}
+                ${name}<br>
                 ${nowPop}
           </td>
           <td class="align-middle">
                 <img src="./images/${type}/shadow/${shadow}.png" alt="" class="img-thumbnail" width="50px"><br>
-                ${shadowName}
+                ${shadowName}<br>　
           </td>
           <td class="align-middle">${place}</td>
           <td class="align-middle">${seasonText}</td>
@@ -1762,7 +1762,7 @@ function CreateMushiTable(json)
         var timeText = MakeSeasonText(info.time, "時");
         var thisMonth = CheckThisMonth(info.season, targetDate);// 今月までフラグ。
         var thisMonthPop = CheckThisMonthPop(info.season, targetDate); // 今月出現するフラグ。
-        var nowPop = CheckNowPop(info.time) ? '<br><font color="FF0000">出現中</font>' : '';
+        var nowPop = CheckNowPop(info.time) ? '<font color="FF0000">出現中</font>' : '';
         var nowPopClass = CheckNowPop(info.time) ? 'table-info' : '';
 
         var html = `
@@ -1770,7 +1770,7 @@ function CreateMushiTable(json)
           <td class="align-middle ${nowPopClass}">
                 <input type="hidden" name='${type}${count}' class="kizou_check" id="${type}_check">
                 <img src="./images/${type}/${imgName}" alt="${name}" class="img-thumbnail" width="59px"><br>
-                ${name}
+                ${name}<br>
                 ${nowPop}
           </td>
           <td class="align-middle">${place}</td>
@@ -1804,7 +1804,7 @@ function CreateKaisanTable(json)
         var timeText = MakeSeasonText(info.time, "時");
         var thisMonth = CheckThisMonth(info.season, targetDate);// 今月までフラグ。
         var thisMonthPop = CheckThisMonthPop(info.season, targetDate); // 今月出現するフラグ。
-        var nowPop = CheckNowPop(info.time) ? '<br><font color="FF0000">出現中</font>' : '';
+        var nowPop = CheckNowPop(info.time) ? '<font color="FF0000">出現中</font>' : '';
         var nowPopClass = CheckNowPop(info.time) ? 'table-info' : '';
 
         var html = `
@@ -1812,12 +1812,12 @@ function CreateKaisanTable(json)
           <td class="align-middle ${nowPopClass}">
                 <input type="hidden" name='${type}${count}' class="kizou_check" id="${type}_check">
                 <img src="./images/${type}/${imgName}" alt="${name}" class="img-thumbnail" width="59px"><br>
-                ${name}
+                ${name}<br>
                 ${nowPop}
           </td>
           <td class="align-middle">
                 <img src="./images/${type}/shadow/${shadow}.png" alt="" class="img-thumbnail" width="50px"><br>
-                ${shadowName}
+                ${shadowName}<br>　
           </td>
           <td class="align-middle">${seasonText}</td>
           <td class="align-middle">${timeText}</td>
