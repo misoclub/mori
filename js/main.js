@@ -1718,8 +1718,8 @@ function CreateFishTable(json)
         var timeText = MakeSeasonText(info.time, "時");
         var thisMonth = CheckThisMonth(info.season, targetDate);// 今月までフラグ。
         var thisMonthPop = CheckThisMonthPop(info.season, targetDate); // 今月出現するフラグ。
-        var nowPop = CheckNowPop(info.time) ? '<font color="FF0000">出現中</font>' : '';
-        var nowPopClass = CheckNowPop(info.time) ? 'table-info' : '';
+        var nowPop = CheckNowPop(info.time, info.season) ? '<font color="FF0000">出現中</font>' : '';
+        var nowPopClass = CheckNowPop(info.time, info.season) ? 'table-info' : '';
 
         var html = `
         <tr class="table_row ${thisMonth} ${thisMonthPop}" name='${type}${count}'>
@@ -1762,8 +1762,8 @@ function CreateMushiTable(json)
         var timeText = MakeSeasonText(info.time, "時");
         var thisMonth = CheckThisMonth(info.season, targetDate);// 今月までフラグ。
         var thisMonthPop = CheckThisMonthPop(info.season, targetDate); // 今月出現するフラグ。
-        var nowPop = CheckNowPop(info.time) ? '<font color="FF0000">出現中</font>' : '';
-        var nowPopClass = CheckNowPop(info.time) ? 'table-info' : '';
+        var nowPop = CheckNowPop(info.time, info.season) ? '<font color="FF0000">出現中</font>' : '';
+        var nowPopClass = CheckNowPop(info.time, info.season) ? 'table-info' : '';
 
         var html = `
         <tr class="table_row ${thisMonth} ${thisMonthPop}" name='${type}${count}'>
@@ -1804,8 +1804,8 @@ function CreateKaisanTable(json)
         var timeText = MakeSeasonText(info.time, "時");
         var thisMonth = CheckThisMonth(info.season, targetDate);// 今月までフラグ。
         var thisMonthPop = CheckThisMonthPop(info.season, targetDate); // 今月出現するフラグ。
-        var nowPop = CheckNowPop(info.time) ? '<font color="FF0000">出現中</font>' : '';
-        var nowPopClass = CheckNowPop(info.time) ? 'table-info' : '';
+        var nowPop = CheckNowPop(info.time, info.season) ? '<font color="FF0000">出現中</font>' : '';
+        var nowPopClass = CheckNowPop(info.time, info.season) ? 'table-info' : '';
 
         var html = `
         <tr class="table_row ${thisMonth} ${thisMonthPop}" name='${type}${count}'>
@@ -1838,11 +1838,24 @@ function ClearAllTable()
 }
 
 // 現在の時間に出現するか。
-function CheckNowPop(array)
+function CheckNowPop(array, seasonArray)
 {
     var today = new Date();
     var pop = array.indexOf(today.getHours());
-    return (pop >= 0);
+
+    // 時間的に出現する。
+    if(pop >= 0)
+    {
+        // 今月出現する。
+        var thisMonth = (today.getMonth()+1);
+        var thisMonthResult = seasonArray.indexOf(thisMonth);
+        if(thisMonthResult >= 0)
+        {
+            return true;
+        }
+    }
+
+    return false;
 }
 
 function CheckThisMonthPop(array, date)
